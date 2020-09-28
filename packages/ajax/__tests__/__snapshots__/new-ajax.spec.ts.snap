@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@ekit/ajax work ok check sample/responseFail.ts work ok 1`] = `
+Array [
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type '\\"\\"' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "__tests__/samples/responseFail.ts",
+    "messageText": "Type 'number' is not assignable to type '\\"message\\" | \\"code\\" | \\"result\\"'.",
+  },
+]
+`;
+
+exports[`@ekit/ajax work ok check sample/responseOK.ts work ok 1`] = `Array []`;

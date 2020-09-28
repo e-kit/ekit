@@ -1,0 +1,10 @@
+{
+  "extends": "@ekit/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
+  }
+}

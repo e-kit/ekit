@@ -1,0 +1,8 @@
+{
+  "extends": "@ekit/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
+  }
+}

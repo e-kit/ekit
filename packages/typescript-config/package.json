@@ -1,0 +1,30 @@
+{
+  "name": "@ekit/typescript-config",
+  "version": "0.0.1",
+  "description": "typescript common config",
+  "keywords": [
+    "typescript",
+    "config"
+  ],
+  "author": "yangqianjun",
+  "homepage": "https://github.com/e-kit/ekittree/master/packages/typescript-config#readme",
+  "license": "MIT",
+  "main": "tsconfig.json",
+  "directories": {},
+  "files": [
+    "tsconfig.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoyqj/ekit.git"
+  },
+  "scripts": {
+    "test": "exit 0"
+  },
+  "bugs": {
+    "url": "https://github.com/e-kit/ekitissues"
+  },
+  "peerDependencies": {
+    "typescript": "^3.8.2"
+  }
+}

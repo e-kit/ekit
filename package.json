@@ -1,0 +1,98 @@
+{
+  "name": "ekit",
+  "version": "0.0.0",
+  "description": "ekit",
+  "scripts": {
+    "test": "lerna run test",
+    "doc:dev": "docusaurus start",
+    "doc:build": "docusaurus build",
+    "docusaurus": "docusaurus",
+    "doc:swizzle": "docusaurus swizzle",
+    "doc:deploy": "docusaurus deploy",
+    "doc:serve": "docusaurus serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoyqj/ekit.git"
+  },
+  "keywords": [
+    "React",
+    "TypeScript",
+    "Jest",
+    "cra"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/e-kit/ekitissues"
+  },
+  "homepage": "https://github.com/gogoyqj/ekit#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-typescript": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@docusaurus/core": "^2.0.0-alpha.63",
+    "@docusaurus/init": "^2.0.0-alpha.64",
+    "@docusaurus/module-type-aliases": "^2.0.0-alpha.51",
+    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.37",
+    "@docusaurus/preset-bootstrap": "^2.0.0-alpha.51",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.63",
+    "@docusaurus/theme-classic": "^2.0.0-alpha.37",
+    "@mdx-js/react": "^1.6.16",
+    "@tsconfig/docusaurus": "^1.0.2",
+    "@types/jest": "^26.0.7",
+    "@types/node": "^14.0.26",
+    "@types/qs": "^6.9.4",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
+    "@types/redux-actions": "^2.6.1",
+    "antd": "^4.5.1",
+    "babel-loader": "^8.1.0",
+    "commitlint": "^9.1.0",
+    "css-loader": "^4.0.0",
+    "docusaurus-plugin-typedoc": "0.0.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^7.5.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "jsdom": "^16.3.0",
+    "jsdom-global": "^3.0.2",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "redux": "^4.0.5",
+    "remark-typescript-tools": "^1.0.1",
+    "style-loader": "^1.2.1",
+    "ts-jest": "^26.1.3",
+    "typedoc": "^0.19.1",
+    "typedoc-plugin-markdown": "^2.4.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.0"
+  },
+  "dependencies": {
+    "@ekit/actions": "file:packages/actions",
+    "@ekit/ajax": "file:packages/ajax",
+    "@ekit/async": "file:packages/async",
+    "@ekit/commitlint-config": "file:packages/commitlint-config",
+    "@ekit/eslint-config": "file:packages/eslint-config",
+    "@ekit/event-center": "file:packages/event-center",
+    "@ekit/jest-config": "file:packages/jest-config",
+    "@ekit/model": "file:packages/model",
+    "@ekit/model-factory": "file:packages/model-factory",
+    "@ekit/redux-model": "file:packages/redux-model",
+    "@ekit/types": "file:packages/types",
+    "@ekit/typescript-config": "file:packages/typescript-config",
+    "@ekit/typescript-type-tester": "file:packages/typescript-type-tester",
+    "@ekit/use-model": "file:packages/use-model"
+  }
+}

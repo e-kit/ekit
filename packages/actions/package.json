@@ -1,0 +1,31 @@
+{
+  "name": "@ekit/actions",
+  "version": "0.0.0",
+  "description": "actions",
+  "author": "yangqianjun",
+  "homepage": "https://github.com/e-kit/ekittree/master/packages/actions#readme",
+  "license": "MIT",
+  "main": "lib/actions.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoyqj/ekit.git"
+  },
+  "scripts": {
+    "test": "jest --all",
+    "build": "tsc --project tsconfig.prod.json"
+  },
+  "bugs": {
+    "url": "https://github.com/e-kit/ekitissues"
+  },
+  "dependencies": {
+    "redux-actions": "^2.6.5",
+    "typesafe-actions": "^5.1.0"
+  }
+}

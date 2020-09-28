@@ -1,0 +1,44 @@
+{
+  "name": "@ekit/eslint-config",
+  "version": "0.0.1",
+  "description": "eslint config",
+  "author": "yangqianjun",
+  "homepage": "https://github.com/e-kit/ekittree/master/packages/eslint-config#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoyqj/ekit.git"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "build": "tsc --project tsconfig.prod.json"
+  },
+  "bugs": {
+    "url": "https://github.com/e-kit/ekitissues"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.4",
+    "eslint-plugin-react-hooks": "^4.0.8"
+  },
+  "peerDependencies": {
+    "eslint": "^7.5.0",
+    "prettier": "^2.0.5"
+  }
+}

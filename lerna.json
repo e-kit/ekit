@@ -1,0 +1,10 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "bootstrap": {
+    "npmClientArgs": ["--no-package-lock", "--access=public"],
+    "publish": {
+      "message": "chore(release): publish"
+    }
+  }
+}

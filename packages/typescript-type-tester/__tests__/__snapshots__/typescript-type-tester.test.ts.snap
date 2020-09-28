@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`typescript-type-tester parser should detect error: error.ts 1`] = `
+Object {
+  "error.ts": Array [
+    Object {
+      "category": 1,
+      "code": 2322,
+      "fileName": "__tests__/samples/error.ts",
+      "messageText": "Type '\\"1\\"' is not assignable to type 'number'.",
+    },
+  ],
+}
+`;

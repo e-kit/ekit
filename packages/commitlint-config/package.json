@@ -1,0 +1,32 @@
+{
+  "name": "@ekit/commitlint-config",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "yangqianjun",
+  "homepage": "https://github.com/e-kit/ekittree/master/packages/commitlint-config#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+  },
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoyqj/ekit.git"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "build": "exit 0"
+  },
+  "peerDependencies": {
+    "commitlint": "^9.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  },
+  "bugs": {
+    "url": "https://github.com/e-kit/ekitissues"
+  }
+}
