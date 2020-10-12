@@ -13,8 +13,7 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-  },
+  "publishConfig": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gogoyqj/ekit.git"
@@ -30,8 +29,5 @@
     "@ekit/event-center": "file:../event-center",
     "axios": "^0.19.2",
     "qs": "^6.9.4"
-  },
-  "devDependencies": {
-    "@types/qs": "^6.9.4"
   }
 }

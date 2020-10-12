@@ -13,8 +13,7 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-  },
+  "publishConfig": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gogoyqj/ekit.git"
@@ -25,5 +24,8 @@
   },
   "bugs": {
     "url": "https://github.com/e-kit/ekitissues"
+  },
+  "dependencies": {
+    "immer": "^7.0.9"
   }
 }
