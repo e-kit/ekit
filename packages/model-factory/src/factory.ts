@@ -89,7 +89,7 @@ export default function factory<
         ? <S>(state: S, action: AbstractAction) => {
             return {
               ...state,
-              [namespace]: produce(state[namespace], (draftState) =>
+              [namespace]: produce(state[namespace], (draftState: any) =>
                 reducers[doSomething](draftState, action)
               )
             };

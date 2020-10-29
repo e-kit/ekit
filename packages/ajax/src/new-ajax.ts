@@ -85,13 +85,13 @@ export class WrappedFetch {
       };
     }
     const [{ resolve: cancelRequest }, internalCancel] = promiseFactory<string>();
-    config.cancelToken = new axios.CancelToken(c => {
+    config.cancelToken = new axios.CancelToken((c) => {
       // 外部
       cancel && cancel.then(c, emptyFunc);
       // 内部自动取消
       internalCancel.then(c, emptyFunc);
     });
-    const prom: Promise<any> = axiosInst
+    let prom: Promise<any> = axiosInst
       .request({
         ...config,
         url: testUser
@@ -101,8 +101,10 @@ export class WrappedFetch {
           : url,
         params: query
       })
-      .then(res => res.data)
-      .catch(onStatusError);
+      .then((res) => res.data);
+    if (this.autoCatch) {
+      prom = prom.catch(onStatusError);
+    }
     // IMP: 修复 tkit/service 设计上的硬伤
     prom['cancel'] = cancelRequest;
     return prom as Promise<any>;
@@ -118,6 +120,11 @@ export class WrappedFetch {
       }
     }
   }
+
+  /**
+   * 是否默认 catch ajax 错误，默认开启，设置为 false，关闭 catch
+   */
+  public autoCatch = true;
 }
 
 export default new WrappedFetch();
