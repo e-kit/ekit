@@ -23,7 +23,7 @@ export interface AsyncProps {
    * @deprecated 不推荐使用
    */
   loading?: React.ComponentType<{ status: AsyncStatus }>;
-  /** 全局加载效果组件【所有effect共用一个效果】3.0.6+ */
+  /** 全局加载效果组件【所有effect共用一个效果 */
   sharedLoading?: React.ComponentType;
   /** 显示副作用提示信息的函数 */
   tips?: (e: AsyncResultEventType) => any;

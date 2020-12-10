@@ -82,7 +82,7 @@ export interface NewAsyncParams<F extends TkitAjaxFunction> extends IAsyncConfir
   extraParams?: TkitUtils.GetArgumentsType<F>[0];
   /** 来源 */
   channel?: string;
-  /** effect name【@ekit/async 3.0.5 起支持】 */
+  /** effect name */
   effectName?: string;
 }
 
@@ -190,7 +190,7 @@ const model = M({
     doAsyncConfirmedStart: (state, action: Tction<AsyncStatus>): IAsyncState => {
       let isNew = true;
       const { ASYNC_ID } = action.payload;
-      const newStatus = state.asyncStatus.map(status => {
+      const newStatus = state.asyncStatus.map((status) => {
         if (status.ASYNC_ID === ASYNC_ID) {
           isNew = false;
           const { modalProps, formProps } = status;
@@ -288,13 +288,13 @@ const model = M({
     doClearModal: (state): IAsyncState => {
       return {
         ...state,
-        asyncStatus: state.asyncStatus.filter(status => status.visible !== false)
+        asyncStatus: state.asyncStatus.filter((status) => status.visible !== false)
       };
     }
   },
   effects: {
     doAsync: [
-      async function<F extends TkitAjaxFunction>(
+      async function <F extends TkitAjaxFunction>(
         { tPut }: BaseEffectsUtils,
         action: Tction<Omit<IAsyncActionProps<F>, 'ASYNC_ID'>>
       ) {
