@@ -1,6 +1,6 @@
 {
   "name": "@ekit/model-factory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "model factory",
   "author": "yangqianjun",
   "homepage": "https://github.com/e-kit/ekittree/master/packages/model-factory#readme",
@@ -29,9 +29,9 @@
     "tslib": "*"
   },
   "dependencies": {
-    "immer": "^7.0.9",
+    "@ekit/actions": "file:../actions",
     "@ekit/event-center": "file:../event-center",
     "@ekit/types": "file:../types",
-    "@ekit/actions": "file:../actions"
+    "immer": "^7.0.9"
   }
 }

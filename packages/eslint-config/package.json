@@ -1,6 +1,6 @@
 {
   "name": "@ekit/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint config",
   "author": "yangqianjun",
   "homepage": "https://github.com/e-kit/ekittree/master/packages/eslint-config#readme",
@@ -38,8 +38,8 @@
     "eslint-plugin-react-hooks": "^4.0.8"
   },
   "peerDependencies": {
-    "tslib": "*",
     "eslint": "^7.5.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "tslib": "*"
   }
 }
