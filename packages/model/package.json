@@ -29,7 +29,8 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/redux-model": "file:../redux-model",
-    "@ekit/use-model": "file:../use-model"
-  }
+    "@ekit/redux-model": "^0.0.2",
+    "@ekit/use-model": "^0.0.2"
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

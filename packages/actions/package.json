@@ -31,5 +31,6 @@
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
     "typesafe-actions": "^5.1.0"
-  }
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

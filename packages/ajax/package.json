@@ -29,8 +29,9 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/event-center": "file:../event-center",
+    "@ekit/event-center": "^0.0.1",
     "axios": "^0.19.2",
     "qs": "^6.9.4"
-  }
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

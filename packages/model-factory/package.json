@@ -29,9 +29,10 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/actions": "file:../actions",
-    "@ekit/event-center": "file:../event-center",
-    "@ekit/types": "file:../types",
+    "@ekit/actions": "^0.0.4",
+    "@ekit/event-center": "^0.0.1",
+    "@ekit/types": "^0.0.2",
     "immer": "^7.0.9"
-  }
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

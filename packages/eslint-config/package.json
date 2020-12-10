@@ -41,5 +41,6 @@
     "eslint": "^7.5.0",
     "prettier": "^2.0.5",
     "tslib": "*"
-  }
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

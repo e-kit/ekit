@@ -27,11 +27,12 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/event-center": "file:../event-center",
+    "@ekit/event-center": "^0.0.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@ekit/jest-config": "file:../jest-config",
-    "@ekit/typescript-config": "file:../typescript-config"
-  }
+    "@ekit/jest-config": "^0.0.2",
+    "@ekit/typescript-config": "^0.0.2"
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

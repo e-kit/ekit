@@ -31,6 +31,7 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/model-factory": "file:../model-factory"
-  }
+    "@ekit/model-factory": "^0.0.2"
+  },
+  "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }
