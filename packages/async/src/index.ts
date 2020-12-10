@@ -7,7 +7,7 @@
  */
 
 import { TkitUtils } from '@ekit/types';
-import EventCenter from '@ekit/event-center';
+import { EventCenter } from '@ekit/event';
 import { TkitAjaxFunction } from '@ekit/ajax';
 import { AsyncModelType, IAsyncActionProps, IAsyncConfirmedParams } from './asyncModel';
 import { ASYNC_EFFECT_EVENT_NAME, AsyncEffectEventType } from './consts';

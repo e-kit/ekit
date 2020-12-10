@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/*Model work ok useModel doBlockingOK_BlockingERROR work ok: doBlockingOK_BlockingERROR 1`] = `
+Array [
+  "devtool watched action: {\\"type\\":\\"test/doBlockingOK_BlockingERROR\\",\\"payload\\":\\"doBlockingOK_BlockingERROR\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doBlockingOK_BlockingERROR 1\\",\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doBlockingOK_BlockingERROR 1",
+  "doNameOK: doBlockingOK_BlockingERROR \\"OK doNameOK: doBlockingOK_BlockingERROR 1\\" 2",
+  "devtool watched action: {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doBlockingOK_BlockingERROR 3\\",\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameERROR: doBlockingOK_BlockingERROR 3",
+  "HOOKS_EFFECTS_ERROR: test/doNameERROR ERROR doNameERROR: doBlockingOK_BlockingERROR 3",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doNameERROR: doBlockingOK_BlockingERROR 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doBlockingOK_BlockingERROR ERROR doNameERROR: doBlockingOK_BlockingERROR 3",
+  "Promise ERROR: ERROR doNameERROR: doBlockingOK_BlockingERROR 3",
+]
+`;
+
+exports[`utils/*Model work ok useModel doBlockingOK_NonBlockingERROR work ok: doBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "devtool watched action: {\\"type\\":\\"test/doBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doBlockingOK_NonBlockingERROR 1",
+  "doNameERROR: doBlockingOK_NonBlockingERROR \\"OK doNameOK: doBlockingOK_NonBlockingERROR 1\\" 2",
+  "devtool watched action: {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 4\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameERROR: doBlockingOK_NonBlockingERROR {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 4\\"} 3",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "Promise OK: false",
+  "doNameERROR: doBlockingOK_NonBlockingERROR 4",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\",\\"error\\":\\"ERROR doNameERROR: doBlockingOK_NonBlockingERROR 4\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNameERROR ERROR doNameERROR: doBlockingOK_NonBlockingERROR 4",
+]
+`;
+
+exports[`utils/*Model work ok useModel doNonBlockingOK_BlockingERROR work ok: doNonBlockingOK_BlockingERROR 1`] = `
+Array [
+  "devtool watched action: {\\"type\\":\\"test/doNonBlockingOK_BlockingERROR\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 2\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doNonBlockingOK_BlockingERROR {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 2\\"} 1",
+  "devtool watched action: {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 3\\",\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doNonBlockingOK_BlockingERROR 2",
+  "doNameERROR: doNonBlockingOK_BlockingERROR 3",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNameERROR ERROR doNameERROR: doNonBlockingOK_BlockingERROR 3",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doNameERROR: doNonBlockingOK_BlockingERROR 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNonBlockingOK_BlockingERROR ERROR doNameERROR: doNonBlockingOK_BlockingERROR 3",
+  "Promise ERROR: ERROR doNameERROR: doNonBlockingOK_BlockingERROR 3",
+]
+`;
+
+exports[`utils/*Model work ok useModel doNonBlockingOK_NonBlockingERROR work ok: doNonBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "devtool watched action: {\\"type\\":\\"test/doNonBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doNonBlockingOK_NonBlockingERROR 1 {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameERROR: doNonBlockingOK_NonBlockingERROR 2 {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "Promise OK: OK: doNonBlockingOK_NonBlockingERROR",
+  "doNameOK: doNonBlockingOK_NonBlockingERROR -1",
+  "doNameERROR: doNonBlockingOK_NonBlockingERROR -1",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\",\\"error\\":\\"ERROR doNameERROR: doNonBlockingOK_NonBlockingERROR -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNameERROR ERROR doNameERROR: doNonBlockingOK_NonBlockingERROR -1",
+]
+`;
+
+exports[`utils/*Model work ok useModel doNonBlockingOK_NonBlockingERROR_ERROR work ok: doNonBlockingOK_NonBlockingERROR_ERROR 1`] = `
+Array [
+  "devtool watched action: {\\"type\\":\\"test/doNonBlockingOK_NonBlockingERROR_ERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameOK: doNonBlockingOK_NonBlockingERROR_ERROR {\\"type\\":\\"test/doNameOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR -1\\"} 1",
+  "devtool watched action: {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR -1\\"}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doNameERROR: doNonBlockingOK_NonBlockingERROR_ERROR {\\"type\\":\\"test/doNameERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR -1\\"} 2",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_NonBlockingERROR_ERROR\\",\\"error\\":\\"ERROR: doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNonBlockingOK_NonBlockingERROR_ERROR ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "Promise ERROR: ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "doNameOK: doNonBlockingOK_NonBlockingERROR_ERROR -1",
+  "doNameERROR: doNonBlockingOK_NonBlockingERROR_ERROR -1",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\",\\"error\\":\\"ERROR doNameERROR: doNonBlockingOK_NonBlockingERROR_ERROR -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "devtool watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"test/doNameERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "HOOKS_EFFECTS_ERROR: test/doNameERROR ERROR doNameERROR: doNonBlockingOK_NonBlockingERROR_ERROR -1",
+]
+`;

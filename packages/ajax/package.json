@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/e-kit/ekitissues"
   },
+  "peerDependencies": {
+    "tslib": "*"
+  },
   "dependencies": {
     "@ekit/event-center": "file:../event-center",
     "axios": "^0.19.2",

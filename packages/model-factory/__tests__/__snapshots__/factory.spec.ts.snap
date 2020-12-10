@@ -1,69 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[
-  `model-factory/createModel async work ok check sample/testCreateAsyncModelFail.ts work ok 1`
-] = `
+exports[`model-factory/createModel async work ok check sample/testCreateAsyncModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateAsyncModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
 `;
 
-exports[
-  `model-factory/createModel async work ok check sample/testCreateAsyncModelOK.ts work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel async work ok check sample/testCreateAsyncModelOK.ts work ok 1`] = `Array []`;
 
-exports[
-  `model-factory/createModel async work ok check sample/testCreateMixAsyncModelFail.ts work ok 1`
-] = `
+exports[`model-factory/createModel async work ok check sample/testCreateMixAsyncModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
 `;
 
-exports[
-  `model-factory/createModel async work ok check sample/testCreateMixAsyncModelOK.t work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel async work ok check sample/testCreateMixAsyncModelOK.t work ok 1`] = `Array []`;
 
 exports[`model-factory/createModel work ok check sample/testCreateModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<string>) => { id: string; name: string; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ id: string; name: string; }' and 'State' are incompatible.
     The types of 'id' are incompatible between these types.
@@ -72,7 +64,7 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<{ user: { id: string; }; }>) => { id: string; name: string; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ id: string; name: string; }' and 'State' are incompatible.
     The types of 'id' are incompatible between these types.
@@ -81,13 +73,13 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<number>) => { name: number; id: number; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ name: number; id: number; }' and 'State' are incompatible.
     The types of 'name' are incompatible between these types.
@@ -96,7 +88,7 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/factorySamples/testCreateModelFail.ts",
+    "fileName": "factorySamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<{ user: { name: number; }; }>) => { name: number; id: number; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ name: number; id: number; }' and 'State' are incompatible.
     The types of 'name' are incompatible between these types.
@@ -105,54 +97,65 @@ Array [
 ]
 `;
 
-exports[
-  `model-factory/createModel work ok check sample/testCreateModelOK.ts work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel work ok check sample/testCreateModelNBFail.ts work ok 1`] = `
+Array [
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "factorySamples/testCreateModelNBFail.ts",
+    "messageText": "Type '1' is not assignable to type 'string'.",
+  },
+  Object {
+    "category": 1,
+    "code": 2322,
+    "fileName": "factorySamples/testCreateModelNBFail.ts",
+    "messageText": "Type 'number' is not assignable to type 'string'.",
+  },
+]
+`;
 
-exports[
-  `model-factory/createModel work ok check sample/testCreateModelStateReadOnlyFail.ts work ok 1`
-] = `
+exports[`model-factory/createModel work ok check sample/testCreateModelNBOK.ts work ok 1`] = `Array []`;
+
+exports[`model-factory/createModel work ok check sample/testCreateModelOK.ts work ok 1`] = `Array []`;
+
+exports[`model-factory/createModel work ok check sample/testCreateModelStateReadOnlyFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2540,
-    "fileName": "__tests__/factorySamples/testCreateModelStateReadOnlyFail.ts",
+    "fileName": "factorySamples/testCreateModelStateReadOnlyFail.ts",
     "messageText": "Cannot assign to 'id' because it is a read-only property.",
   },
 ]
 `;
 
-exports[
-  `model-factory/createModel work ok check sample/testCreateModelStateReadOnlyOK.ts work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel work ok check sample/testCreateModelStateReadOnlyOK.ts work ok 1`] = `Array []`;
 
 exports[`model-factory/createModel work ok check sample/testCreateModelTYPESFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2339,
-    "fileName": "__tests__/factorySamples/testCreateModelTYPESFail.ts",
+    "fileName": "factorySamples/testCreateModelTYPESFail.ts",
     "messageText": "Property 'a' does not exist on type 'ActionTypes'.",
   },
 ]
 `;
 
-exports[
-  `model-factory/createModel work ok check sample/testCreateModelTYPESOK.ts work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel work ok check sample/testCreateModelTYPESOK.ts work ok 1`] = `Array []`;
 
 exports[`model-factory/createModel work ok check sample/testPutCallInModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/factorySamples/testPutCallInModelFail.ts",
+    "fileName": "factorySamples/testPutCallInModelFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2769,
-    "fileName": "__tests__/factorySamples/testPutCallInModelFail.ts",
+    "fileName": "factorySamples/testPutCallInModelFail.ts",
     "messageText": "No overload matches this call.
   Overload 1 of 4, '(effect: string | Tction<any>): Promise<unknown>', gave the following error.
     Argument of type '<P extends Tction<string>>(payload: P[\\"payload\\"]) => Promise<number>' is not assignable to parameter of type 'string | Tction<any>'.
@@ -163,6 +166,4 @@ Array [
 ]
 `;
 
-exports[
-  `model-factory/createModel work ok check sample/testPutCallInModelOK.ts work ok 1`
-] = `Array []`;
+exports[`model-factory/createModel work ok check sample/testPutCallInModelOK.ts work ok 1`] = `Array []`;

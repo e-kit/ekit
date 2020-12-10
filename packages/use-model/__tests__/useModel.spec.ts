@@ -13,8 +13,8 @@ const files = 'testLocalModelFail.ts testLocalModelOK.ts testUseModelFail.ts tes
 );
 
 describe('utils/useModel work ok', () => {
-  const errors = parser(files, `${process.cwd()}/__tests__/useModelSamples`);
-  files.forEach((file) =>
+  const errors = parser(files, 'useModelSamples');
+  files.forEach(file =>
     it(`check sample/${file} work ok`, () => {
       const current = errors[file];
       if (file.match(/OK/)) {

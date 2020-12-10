@@ -8,3 +8,5 @@ export interface Tction<P> {
 
 /**  Tkit Basic Action */
 export type AbstractAction = Tction<any>;
+
+export { TkitUtils } from '@ekit/types';

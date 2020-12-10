@@ -3,15 +3,16 @@ import {
   EFFECTS_PROMISE_RESOLVE,
   EFFECTS_PROMISE_REJECT,
   TKIT_EFFECT,
-  noop,
   TKIT_DISPATCH,
-  TKIT_GET_STATE
+  TKIT_GET_STATE,
+  TKIT_NB_EFFECT,
+  noop
 } from '@ekit/model-factory';
 
 /** promise redux 中间件 */
 export const promiseMiddleware: Middleware = ({ dispatch, getState }) => next => action => {
   // 私有协议
-  if (TKIT_EFFECT in action) {
+  if (action[TKIT_EFFECT] && !action[TKIT_NB_EFFECT]) {
     const prom = new Promise((resolve, reject) => {
       next({
         [EFFECTS_PROMISE_RESOLVE]: resolve,
@@ -21,9 +22,8 @@ export const promiseMiddleware: Middleware = ({ dispatch, getState }) => next =>
         ...action
       });
     });
-    // IMP: 还是抛出 promise 错误
-    // catch then won't throw uncaught error
-    // prom.then(noop, noop);
+    // IMP: 自动捕获且不打印错误，在 effectWrapper 里打印
+    prom.then(noop, noop);
     return prom;
   } else {
     return next(action);

@@ -17,7 +17,6 @@ import { HooksModelEffects } from './types';
  * @param model.reducers 推导reducers和同步actions
  * @param model.effects 副作用，推导异步actions
  */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function Model<M, R extends Reducers<M>, E extends HooksModelEffects>(model: {
   /** 命令空间，区分日志使用 */
   namespace: string;

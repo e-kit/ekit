@@ -37,7 +37,7 @@ export function useAsync(
             className: `tkit-async-modal ${(modalProps && modalProps.className) || ''}`,
             content: config.renderForm({
               ...formProps,
-              getForm: (f) => {
+              getForm: f => {
                 form = f;
               }
             }),
@@ -93,7 +93,7 @@ export function useAsync(
   );
   const newActions: typeof actions = {
     ...actions,
-    doAsync: (payload) => {
+    doAsync: payload => {
       return actions.doAsync(asyncFormater(payload));
     }
   };

@@ -6,10 +6,11 @@
  * @LastEditTime: 2020-02-07 15:55:19
  */
 
+/* eslint-disable @typescript-eslint/no-angle-bracket-type-assertion */
 import { M, Tction, IAsyncConfirmedMsg, BaseEffectsUtils } from '@ekit/use-model';
 import { TkitAjaxFunction, AjaxCancelCode } from '@ekit/ajax';
 import { TkitUtils } from '@ekit/types';
-import EventCenter from '@ekit/event-center';
+import { EventCenter } from '@ekit/event';
 import { ASYNC_RESULT_EVENT_NAME, AsyncResultEventType } from './consts';
 
 export interface AsyncForm {
@@ -189,7 +190,7 @@ const model = M({
     doAsyncConfirmedStart: (state, action: Tction<AsyncStatus>): IAsyncState => {
       let isNew = true;
       const { ASYNC_ID } = action.payload;
-      const newStatus = state.asyncStatus.map((status) => {
+      const newStatus = state.asyncStatus.map(status => {
         if (status.ASYNC_ID === ASYNC_ID) {
           isNew = false;
           const { modalProps, formProps } = status;
@@ -287,13 +288,13 @@ const model = M({
     doClearModal: (state): IAsyncState => {
       return {
         ...state,
-        asyncStatus: state.asyncStatus.filter((status) => status.visible !== false)
+        asyncStatus: state.asyncStatus.filter(status => status.visible !== false)
       };
     }
   },
   effects: {
     doAsync: [
-      async function <F extends TkitAjaxFunction>(
+      async function<F extends TkitAjaxFunction>(
         { tPut }: BaseEffectsUtils,
         action: Tction<Omit<IAsyncActionProps<F>, 'ASYNC_ID'>>
       ) {

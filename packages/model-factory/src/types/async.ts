@@ -1,3 +1,11 @@
+/**
+ * @file: description
+ * @author: yangqianjun
+ * @Date: 2020-02-07 11:13:48
+ * @LastEditors: yangqianjun
+ * @LastEditTime: 2020-02-07 15:55:04
+ */
+
 /** 从 @ekit/async 拆分过来 */
 export interface IAsyncConfirmedMsg {
   fetch: any;

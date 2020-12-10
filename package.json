@@ -4,12 +4,8 @@
   "description": "ekit",
   "scripts": {
     "test": "lerna run test",
-    "doc:dev": "docusaurus start",
-    "doc:build": "docusaurus build",
-    "docusaurus": "docusaurus",
-    "doc:swizzle": "docusaurus swizzle",
-    "doc:deploy": "docusaurus deploy",
-    "doc:serve": "docusaurus serve"
+    "doc:dev": "docz dev",
+    "doc:build": "docz build"
   },
   "repository": {
     "type": "git",
@@ -35,17 +31,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/plugin-transform-typescript": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
-    "@docusaurus/core": "^2.0.0-alpha.63",
-    "@docusaurus/init": "^2.0.0-alpha.64",
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.51",
-    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.37",
-    "@docusaurus/preset-bootstrap": "^2.0.0-alpha.51",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.63",
-    "@docusaurus/theme-classic": "^2.0.0-alpha.37",
     "@mdx-js/react": "^1.6.16",
-    "@tsconfig/docusaurus": "^1.0.2",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.7",
     "@types/node": "^14.0.26",
     "@types/qs": "^6.9.4",
@@ -55,9 +45,12 @@
     "@types/redux-actions": "^2.6.1",
     "antd": "^4.5.1",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "commitlint": "^9.1.0",
     "css-loader": "^4.0.0",
-    "docusaurus-plugin-typedoc": "0.0.3",
+    "docz": "^1.3.2",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^1.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.5.0",
@@ -69,6 +62,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "react-docgen-typescript": "^1.16.2",
     "react-dom": "^16.13.1",
     "redux": "^4.0.5",
     "remark-typescript-tools": "^1.0.1",
@@ -85,6 +79,7 @@
     "@ekit/async": "file:packages/async",
     "@ekit/commitlint-config": "file:packages/commitlint-config",
     "@ekit/eslint-config": "file:packages/eslint-config",
+    "@ekit/event": "file:packages/event",
     "@ekit/event-center": "file:packages/event-center",
     "@ekit/jest-config": "file:packages/jest-config",
     "@ekit/model": "file:packages/model",
@@ -93,6 +88,7 @@
     "@ekit/types": "file:packages/types",
     "@ekit/typescript-config": "file:packages/typescript-config",
     "@ekit/typescript-type-tester": "file:packages/typescript-type-tester",
-    "@ekit/use-model": "file:packages/use-model"
+    "@ekit/use-model": "file:packages/use-model",
+    "@ekit/utils": "file:packages/utils"
   }
 }

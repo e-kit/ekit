@@ -4,7 +4,7 @@ import originAxios from 'axios';
 
 import axios from 'src/axios';
 import ajaxV2 from 'src/new-ajax';
-import EventCenter from '@ekit/event-center';
+import { EventCenter } from '@ekit/event/lib/event';
 
 const Error401 = { status: 401, message: 'Unauthorized' };
 const TestData = { code: 0, data: { id: 2 } };
@@ -29,7 +29,7 @@ describe('utils/WrappedFetch work ok', () => {
       }
     })
     .listen(4444);
-  const cancelToken = new originAxios.CancelToken(() => void 0);
+  const cancelToken = new originAxios.CancelToken(() => {});
 
   beforeAll(() => {
     EventCenter.on('common.user.status', statusError);

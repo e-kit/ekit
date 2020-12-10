@@ -38,6 +38,7 @@
     "eslint-plugin-react-hooks": "^4.0.8"
   },
   "peerDependencies": {
+    "tslib": "*",
     "eslint": "^7.5.0",
     "prettier": "^2.0.5"
   }

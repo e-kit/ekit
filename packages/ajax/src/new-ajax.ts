@@ -85,7 +85,7 @@ export class WrappedFetch {
       };
     }
     const [{ resolve: cancelRequest }, internalCancel] = promiseFactory<string>();
-    config.cancelToken = new axios.CancelToken((c) => {
+    config.cancelToken = new axios.CancelToken(c => {
       // 外部
       cancel && cancel.then(c, emptyFunc);
       // 内部自动取消
@@ -101,7 +101,7 @@ export class WrappedFetch {
           : url,
         params: query
       })
-      .then((res) => res.data);
+      .then(res => res.data);
     if (this.autoCatch) {
       prom = prom.catch(onStatusError);
     }

@@ -1,0 +1,204 @@
+---
+name: Redux Model
+menu: 'Redux'
+route: /ekit/redux-model
+---
+
+# Redux Model
+
+Tkit 全局 Redux Model 封装。
+
+```
+npm i -S @ekit/redux-model
+```
+
+## CM
+
+通过 CM 创建集成 Immer 的全局 Redux Model。通过 createModel 创建未集成 Immer 的全局 Redux Model。
+
+## - 示例
+
+```ts
+import createModel, { Tction, CM } from '@ekit/redux-model';
+
+export const userModelState = {
+  name: ''
+};
+
+export const UserModel = CM({
+  state: userModelState,
+  namespace: 'cmModel',
+  reducers: {
+    /** 写入名字 */
+    doSetName: (state, action: Tction<string>) => {
+      state.name = action.payload;
+    }
+  },
+  effects: {}
+});
+```
+
+## - State
+
+通过 Tkit Cli 创建 Model 时会自动将 Model State、Actions、Reducers、Sagas 注入到 Feature 响应的入口文件。
+
+比如，State 入口文件：
+
+```ts
+import { userModelState } from './userModel';
+
+const initialState = {
+  userModel: userModelState
+};
+```
+
+## - Effects
+
+通过 Model 的 effects 属性定义副作用。
+
+## -- tPut, tCall
+
+使用 TypeSafe tPut、tNBPut、tCall 替代 Redux Saga 原生的 put、call。
+
+tPut 是阻塞的，会等到触发 action 结束后，再进入下一步；tNBPut 是非阻塞的，不会等待被触发 action 执行完毕。
+
+```ts
+  import { TkitUtils as Utils } from '@ekit/types';
+
+  const model = CM({
+    effects: {
+      *doXX({ tPut, tCall }): Iterator<{}, any, any> {
+        yield tCall(effect, args: typed)
+        const data: Utils.GetReturnTypeOfAsyncFun<typeof effect> = yield tCall(effect, args);
+        yield tPut(model.action.doYY, args: typed)
+      }
+    }
+  })
+```
+
+## -- With Async
+
+Tkit Redux Model 实现了友好的控制副作用开始、成功、失败交互效果的协议。结合 @ekit/async 一起使用，控制全局的 Loading 效果、提示信息，提升开发效率。
+
+```ts
+{
+  effects: {
+    /** 显示全局的loading效果 */
+    doSomethingWithLoading: [
+      function*({ tPut, tCall }, action: Tction<{ id: string }>): Iterator<{}, any, any> {
+        /** 抛出全局错误信息 */
+        throw '操作失败';
+        /** 抛出全局成功信息 */
+        return '操作成功';
+      },
+      {
+        type: 'takeEvery', // it all depends
+        loading: true
+      }
+    ],
+    *doSomethingAsync({ tPut, tCall }, action: Tction<{ id: string }>): Iterator<{}, any, any> {
+      /**  抛出全局错误信息 */
+      throw '操作失败';
+    }
+  }
+}
+```
+
+所有来自 Tkit Redux Model 的 Effects，在传递给 @ekit/async 的 Payload 内添加标识：
+
+```ts
+{
+  channel: '@ekit/model/effect';
+}
+```
+
+### 示例
+
+```ts
+import { CM, Tction }  from '@ekit/redux-model';
+import otherModel from './otherModel';
+
+const myModel = CM({
+  effects: *doSomethingAsync({ namespace, put, tPut }, action: Tction<{ username: string }>) {
+    // 触发其他 model action
+    // way 1, rec
+    yield tPut(otherModel.actions.actionsNameA, { username: '' });
+    // way 2
+    yield put({ type: otherModel.TYPES.actionsNameA, payload: { username: '' } });
+
+    // 出发本 model action
+    // way 1, rec
+    yield tPut(myModel.actions.actionsNameA, { username: '' });
+    // way 2
+    yield put({ type: myModel.TYPES.actionsNameA, payload: { username: '' } });
+    // way 3
+    yield put({ type: `${namespace}/actionsNameA`, payload: { username: '' } });
+  }
+})
+```
+
+## - Promisified Actions
+
+Tkit Redux Model 支持 Effects 派生 Actions 被触发时返回 Promise。
+
+配置 Redux Store 中间件：
+
+```ts
+import { promiseMiddleware } from '@ekit/model';
+
+// 在 sagaMiddleware 前添加 promiseMiddleware
+const middlewares: Middleware[] = [promiseMiddleware, sagaMiddleware, routerMiddleware(history)];
+```
+
+Connected：
+
+```tsx
+<div
+  className="k-layout-header"
+  onClick={async () => {
+    try {
+      const res = await props.actions.doUserInfo();
+      console.log(res);
+    } catch (e) {}
+  }}
+>
+  test
+</div>
+```
+
+## - Async & Await Effects
+
+Tkit Redux Model 支持 Async 和 Generator 混用，在 Async Effect 内只能使用 asyncSelect、asyncPut、asyncNBPut。
+
+asyncPut 是阻塞的，会等到触发 action 结束后，再进入下一步；asyncNBPut 是非阻塞的，不会等待被触发 action 执行完毕。
+
+```ts
+{
+  effects: {
+    doUserInfo: [
+      function*({ tCall, tPut, select }): Iterator<{}, UserInfoResult | undefined, any> {
+        // 使用 select, tPut, tCall
+        const userInfo = yield select(selectUserInfo);
+        return userInfo;
+      },
+      {
+        type: 'takeLatest'
+      }
+    ],
+    async doAjax({ asyncSelect, asyncPut }) {
+      // 必须使用 asyncSelect asyncPut
+      const lastUserInfo = await asyncSelect(selectUserInfo);
+      const userInfo = await asyncPut(model.actions.doUserInfo);
+      return new Promise<number>(rs => setTimeout(() => rs(1), 500));
+    },
+    doHaha: [
+      async () => {
+        return Promise.resolve({ name: 200 });
+      },
+      {
+        type: 'takeLatest'
+      }
+    ]
+  }
+}
+```

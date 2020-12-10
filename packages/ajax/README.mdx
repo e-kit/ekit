@@ -1,0 +1,187 @@
+---
+name: Ajax
+menu: Ajax
+route: /ekit/ajax
+---
+
+import { Props } from 'docz';
+import {
+  ResultInterface,
+  ParamsInterface,
+  FetchInterface,
+  ExtraFetchParamsInterface
+} from './__tests__/Doc.tsx';
+
+# Ajax
+
+Tkit 规范 Ajax 模块，基于 Axios 封装，支持 RESTful 和 Graphql。
+
+```shell
+npm i -S @ekit/ajax
+```
+
+## 2. API
+
+```ts
+import ajax from '@ekit/ajax';
+```
+
+## - 2.1. Ajax
+
+### Ajax
+
+Ajax 实例提供了以下方法和属性：
+
+<Props of={FetchInterface} />
+
+## - 2.2. Ajax.ajax
+
+Ajax 实例的 ajax 方法接收 [WrappedFetchParams](#wrappedfetchparams-接口) 类型的参数：
+
+### WrappedFetchParams 接口
+
+WrappedFetchParams 继承自 [ExtraFetchParams](#extrafetchparams-接口)
+
+```ts
+interface WrappedFetchParams extends ExtraFetchParams {}
+```
+
+WrappedFetchParams 包含以下属性：
+
+<Props of={ParamsInterface} />
+
+### ExtraFetchParams 接口
+
+WrappedFetchParams 继承的 ExtraFetchParams 包含以下属性：
+
+<Props of={ExtraFetchParamsInterface} />
+
+### Example
+
+```ts
+ajax.ajax({
+  method: 'GET',
+  url: '//xxxx.com'
+});
+```
+
+## - 2.3 Tkit 规范接口
+
+响应数据结构遵循 Tkit 约定的结构 [TkitAbstractAjaxResult](#tkitabstractajaxresult-接口)：
+
+### TkitAbstractAjaxResult 接口
+
+```ts
+interface TkitAbstractAjaxResult<R> {
+  code?: number;
+  message?: null | string;
+  result: R;
+}
+type TkitAjaxResult = TkitAbstractAjaxResult<any>;
+```
+
+<Props of={ResultInterface} />
+
+### 示例
+
+```ts
+import ajax, { TkitAjaxResult, TkitAjaxFunction, AjaxPromise } from '@ekit/ajax';
+
+const res: TkitAjaxResult = { code: 0, result: { id: 2 } };
+const fetchData: TkitAjaxFunction = async () => res;
+const fetchData2: () => AjaxPromise<{ code: number; result: { id: number } }> = async () => res;
+```
+
+## - 2.4 其他接口规范
+
+响应数据结构不遵循 Tkit 规范的接口，请按照以下步骤操作。
+
+首先配置 tsconfig.json：
+
+```json
+{
+  "paths": {
+    "@ajax": ["src/utils/standard-ajax"]
+  }
+}
+```
+
+然后实现自定义的 standard-ajax.ts，比如：
+
+```ts
+export * from '@ekit/ajax';
+export { NonStandardAjaxPromise as AjaxPromise } from '@ekit/ajax';
+export { default } from '@ekit/ajax';
+```
+
+## - 2.5. Ajax 全局事件
+
+Tkit Ajax 默认开启的自动错误捕获里（可通过设置 Ajax 示例 autoCatch false 关闭），当捕获到 401、403 错误的时候，会通过 @ekit/event 抛出全局事件。
+
+```ts
+import { EventCenter } from '@ekit/event';
+
+EventCenter.on('common.user.status', (res: { code?: number; message?: string }) => {});
+```
+
+## - 2.6. Axios 全局配置
+
+我们可以对 Ajax 使用的 Axios 实例添加一些全局设置。
+
+```ts
+import axios from '@ekit/ajax/lib/axios';
+
+/** 配置请求头 */
+axios.defaults.headers = {
+  ['X-TOKEN']: 'something secret'
+};
+
+import qs from 'qs';
+
+/** 配置如何格式化query里的数组 */
+axios.defaults.paramsSerializer = (params) => qs.stringify(params, { arrayFormat: 'repeat' });
+```
+
+## 3. Graphql
+
+基于 graphql-request 封装的 Axios 版本
+
+## - 3.1. 配置 Graphql Client
+
+```ts
+import { GraphQLClient } from '@ekit/ajax/lib/graphql';
+import { getSdk } from '@src/models/service';
+
+const isProd = process.env.NODE_ENV !== 'development';
+const endpoint = isProd ? '/graphql' : 'http://127.0.0.1/graphql';
+
+export const Client = new GraphQLClient(endpoint, {
+  headers: {
+    'Access-Control-Allow-Origin': '*'
+  }
+});
+
+/** xx services */
+export default getSdk(Client);
+```
+
+## - 3.2. Service 示例
+
+```ts
+import { GraphQLClient } from '@ekit/ajax';
+import { print } from 'graphql';
+import gql from 'graphql-tag';
+import { AjaxPromise, ExtraFetchParams } from '@ekit/ajax';
+
+export function getSdk(client: GraphQLClient) {
+  return {
+    docList(
+      variables: DocListQueryVariables,
+      /** 用以 cancel 请求 */
+      opt?: ExtraFetchParams
+    ): AjaxPromise<DocListQueryRes> {
+      return client.request<DocListQueryRes>(print(DocListDocument), variables, opt);
+    }
+  };
+}
+```

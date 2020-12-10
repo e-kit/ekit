@@ -1,0 +1,20 @@
+---
+name: Event Center
+menu: 'Components'
+route: /ekit/event-center
+---
+
+# Event Center
+
+事件中心，自 `@ekit/event` 拆分出来。
+
+```
+npm i -S @ekit/event-center
+```
+
+```ts
+import EventCenter from '@ekit/event';
+
+EventCenter.on('e', () => {});
+EventCenter.emit('e', {});
+```

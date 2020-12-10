@@ -11,7 +11,6 @@ import { IAsyncConfirmedMsg } from '../types';
 import { ASYNC_EFFECT_EVENT_NAME, fakeEffectRes } from '../consts';
 
 /** simulate an effect */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const FakeEffectFactory = ({
   effectName,
   silent,
@@ -32,7 +31,7 @@ export const FakeEffectFactory = ({
     message: false
   };
   const getMsg = () => typeof res.message !== 'object' && res.message;
-  let interactEffect: () => any = rs;
+  let interactEffect: Function = rs;
   // 自动模拟 loading & 成功错误信息效果
   if (silent !== true) {
     interactEffect = () => {

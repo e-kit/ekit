@@ -6,7 +6,7 @@
  * @LastEditTime: 2019-12-06 18:37:43
  */
 import { useEffect, useState } from 'react';
-import EventCenter from '@ekit/event-center';
+import { EventCenter } from '@ekit/event';
 import { AsyncStatus } from './asyncModel';
 import { ASYNC_STATUS_CHANGE_NAME } from './consts';
 
@@ -16,7 +16,7 @@ const statusListSelector: (
   status: AsyncStatus[],
   selector?: AsyncStatusSelector
 ) => AsyncStatus | undefined = (statusList, selector) => {
-  return statusList.find((status) => {
+  return statusList.find(status => {
     if (status.isFetch) {
       if ((selector && selector(status)) || !selector) {
         return status;

@@ -26,7 +26,9 @@
     "url": "https://github.com/e-kit/ekitissues"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "immer": "*",
+    "tslib": "*"
   },
   "dependencies": {
     "@ekit/model-factory": "file:../model-factory"

@@ -22,7 +22,7 @@ export const cmFailModel = CM({
   effects: {
     /** 拉取名字 */
     *doFetchName({ tPut }, action: Tction<string>): Iterator<{}, any, any> {
-      yield new Promise(rs => window.setTimeout(rs, 100));
+      yield new Promise((rs) => window.setTimeout(rs, 100));
       tPut(cmFailModel.actions.doSetName, action.payload);
     }
   }

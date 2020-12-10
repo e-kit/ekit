@@ -1,0 +1,43 @@
+---
+name: Jest Config
+menu: '开发/测试/构建'
+route: /ekit/jest-config
+---
+
+# Jest Config
+
+Tkit Jest 配置封装。
+
+`npm i -D @ekit/jest-config`
+
+## Usage
+
+```js
+const jestConfig = require('@ekit/jest-config');
+
+module.exports = jestConfig;
+```
+
+## Config
+
+## - 配置 Polyfill
+
+在当前应用根目录下创建 config/polyfill.js：
+
+```js
+require('@ekit/config/polyfills.js');
+// do something
+```
+
+## - 配置 Setup
+
+在当前应用根目录下创建 **tests**/setup.ts 或者 **tests**/setup.js。
+
+例如初始化 Enzyme React 环境：
+
+```ts
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```

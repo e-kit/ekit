@@ -1,0 +1,382 @@
+---
+name: Async
+menu: 'Components'
+route: /ekit/async
+---
+
+import { Props, Playground } from 'docz';
+import Async from './src/Async.tsx';
+import Example, {
+  StatusFaker,
+  FormCoreFaker,
+  ModalFaker,
+  FormFaker,
+  ResultTypeFaker,
+  AsyncFaker,
+  AsyncConfirmedFaker
+} from './__tests__/Example.tsx';
+
+# Async
+
+Tkit 异步操作工具模块、组件。
+
+```
+npm i -S @ekit/async
+```
+
+## 2. 配置 Async 组件
+
+在最顶层组件内引入 Async，监听并处理 Async 事件。
+
+```tsx
+import Async from '@ekit/async';
+```
+
+## - 2.1 Async Props
+
+Async 组件 Props 类型是 [AsyncProps](#asyncprops-接口)。
+
+### AsyncProps 接口
+
+AsyncProps 接口包含以下属性和方法：
+
+<Props of={Async} />
+
+### 示例
+
+首先在 [Root.tsx](http://git.corp.kuaishou.com/ks-ep/ks-ep-fe/ts-boilerplate/commit/1846c9df84a783b9ed043988e830f6e62376040f) 内引入 Async。
+
+```tsx
+import React from 'react';
+import { Spin, Modal, message } from 'antd';
+import Async from '@ekit/async';
+
+// 请在 Root.tsx 内添加
+<Async
+  form={Form}
+  // loading={arg => <Spin spinning={arg.status.isFetch} />}
+  sharedLoading={Spin}
+  modal={Modal}
+  tips={({ type, message: msg }) => message[type](msg)}
+/>;
+```
+
+## - 2.1.①. Async Form
+
+表单组件，用来渲染表单，并在 Modal.onOk 时提交表单。表单组件 Props 的类型是 [AsyncFormProps](#asyncformprops-接口)，实现了 [AsyncForm](#asyncform-接口) 定义。
+
+```tsx
+class Form extends React.Component<AsyncFormProps> implements AsyncForm {}
+```
+
+### AsyncFormProps 接口
+
+AsyncFormProps 包含以下属性和方法：
+
+<Props of={FormFaker} />
+
+### AsyncForm 接口
+
+AsyncForm 包含以下属性和方法：
+
+<Props of={FormCoreFaker} />
+
+### 示例
+
+实现一个 FakeForm 组件：
+
+```ts
+export class FakeForm extends React.Component<AsyncFormProps> implements AsyncForm {
+  public static fakeData = {
+    name: 'skipper'
+  };
+  public constructor(props: AsyncFormProps) {
+    super(props);
+    if (props.getForm) {
+      props.getForm(this);
+    }
+  }
+  public submit() {
+    return FormFaker.fakeData;
+  }
+  public render() {
+    return <div>nihao</div>;
+  }
+}
+```
+
+## - 2.1.②. [Deprecated] loading
+
+【废弃，用 sharedLoading 替代】显示加载效果的组件
+
+```tsx
+  interface loading {
+    (arg: AsyncStatus) => any;
+  }
+```
+
+### AsyncStatus 接口
+
+AsyncStatus 包含以下属性和方法：
+
+<Props of={StatusFaker} />
+
+### 示例：
+
+```ts
+(arg: AsyncStatus) => <Spin spinning={arg.status.isFetch} />;
+```
+
+## - 2.1.③. sharedLoading
+
+配置所有 effect 共用的全局加载效果组件。
+
+##### 示例
+
+简单的全局加载效果组件：
+
+```tsx
+() => 'loading';
+```
+
+## - 2.1.④. modal 属性
+
+弹窗组件，可直接使用 Antd Modal 或自定义，Modal 组件 Props 类型为 [AsyncModalProps](#asyncmodalprops-接口)。
+
+```tsx
+class Modal extends React.Component<AsyncModalProps> {}
+```
+
+### AsyncModalProps 接口
+
+AsyncModalProps 包含以下属性和方法：
+
+<Props of={ModalFaker} />
+
+### 示例
+
+实现一个 FakeModal：
+
+```ts
+export class FakeModal： extends React.Component<AsyncModalProps> {
+  public render() {
+    const { visible, title, content, className, confirmLoading, onOk, onCancel } = this.props;
+    return <div>{content}</div>;
+  }
+}
+```
+
+## - 2.1.⑤. tips
+
+配置全局的成功、错误提示函数，该函数接收的参数类型为 [AsyncResultEventType](#asyncresulteventtype-接口)。
+
+```ts
+interface tips {
+  (msg: AsyncResultEventType) => void;
+}
+```
+
+### AsyncResultEventType 接口
+
+AsyncResultEventType 包含以下属性和方法：
+
+<Props of={ResultTypeFaker} />
+
+### 示例
+
+实现一个 message 提示函数：
+
+```ts
+ const message = { error: () => 0, success: () => 1 }
+ ({ type, message: msg }: AsyncResultEventType) => message[type](msg);
+```
+
+## 3. API
+
+Async 也提供了点击取消按钮时候，同时取消异步请求的接口。
+
+```ts
+import { doAsync, doAsyncConfirmed, useAsyncStatus } from '@ekit/async';
+```
+
+## - 3.1. doAsync
+
+doAsync 出发一个可取消的异步事件。
+
+## - 3.1.① doAsync 参数
+
+### IAsyncActionProps 接口
+
+<Props of={AsyncFaker} />
+
+### 示例
+
+```ts
+doAsync(<IAsyncActionProps<any>>{ ... })
+```
+
+### 取消示例
+
+```ts
+import { promiseFactory } from '@ekit/ajax';
+
+const [{ resolve }, cancel] = promiseFactory<string>();
+const res = yield doAsync({
+  fetch: naotu.doModifyDoc,
+  ...,
+  paramsGenerator: ({ extraParams }) => [
+    {
+      doc: {
+        ...extraParams
+      }
+    },
+    {
+      cancel
+    }
+  ],
+  onCancel: () => {
+    resolve('放弃了');
+  },
+  ...
+});
+```
+
+## - 3.2. doAsyncConfirmed
+
+## - 3.2.① doAsyncConfirmed 参数
+
+### IAsyncConfirmedParams 接口
+
+<Props of={AsyncConfirmedFaker} />
+
+### 示例
+
+```ts
+doAsyncConfirmed(<IAsyncConfirmedParams<any>>{ ... })
+```
+
+## - 3.3. useAsyncStatus
+
+我们可以通过 @ekit/async 提供的 useAsyncStatus Hooks，定制组件局部的 loading 效果。需要再容器内局部显示 loading 效果的，请勿给对应的 Model Effect 添加 loading 配置，否则也会显示全局 loading 效果。
+
+### 示例
+
+```tsx
+import { useAsyncStatus } from '@ekit/async';
+
+const Cp = () => {
+  const [status] = useAsyncStatus(
+    (status: AsyncStatus) => status.effectName === 'docModel/getDocList'
+  );
+
+  return status ? 'loading' : null;
+};
+```
+
+## 4. Demo
+
+<Playground>
+  <Example />
+</Playground>
+
+### Demo 源码
+
+```tsx
+import React from 'react';
+import { Spin, Modal, Button, Input, message } from 'antd';
+import { AjaxPromise, TkitAjaxFunction } from '@ekit/ajax';
+import { AsyncResultEventType, doAsync, doAsyncConfirmed, Async } from '@ekit/async';
+
+// @IMP: 表单组件
+export class FormFaker extends React.Component<AsyncFormProps> {
+  public static fakeData = {
+    name: 'skipper'
+  };
+  public constructor(props: AsyncFormProps) {
+    super(props);
+    if (props.getForm) {
+      props.getForm(this);
+    }
+  }
+  public submit() {
+    return FormFaker.fakeData;
+  }
+  public render() {
+    return <div>nihao</div>;
+  }
+}
+
+const loadData = (id: number): AjaxPromise<any> => {
+  console.log('running effect');
+  return new Promise((rs, rj) => {
+    setTimeout(() => rs({ code: 0, message: '逗我呢', result: { id } }), 1000);
+  });
+};
+
+export default function Example() {
+  return (
+    <div>
+      <Async
+        form={FormFaker}
+        loading={(arg) => <Spin spinning={arg.status.isFetch} />}
+        modal={Modal}
+        tips={({ type, message: msg }) => message[type](msg)}
+      />
+      <Button
+        onClick={() => {
+          doAsync({
+            fetch: loadData,
+            callback: console.log,
+            modalProps: {
+              title: 'nihao',
+              content: (
+                <div>
+                  <Input />
+                  <Button
+                    onClick={() => {
+                      doAsync({
+                        fetch: loadData,
+                        modalProps: {
+                          content: '你好',
+                          title: '2'
+                        }
+                      });
+                    }}
+                  >
+                    嵌套了
+                  </Button>
+                </div>
+              )
+            }
+          });
+        }}
+      >
+        弹窗测试
+      </Button>
+      &nbsp;
+      <Button
+        onClick={() => {
+          doAsyncConfirmed({
+            fetch: loadData,
+            callback: console.log
+          });
+        }}
+      >
+        不弹窗带loading测试
+      </Button>
+      &nbsp;
+      <Button
+        onClick={() => {
+          doAsyncConfirmed({
+            fetch: loadData,
+            callback: console.log,
+            indicator: null
+          });
+        }}
+      >
+        不显示loading测试
+      </Button>
+    </div>
+  );
+}
+```

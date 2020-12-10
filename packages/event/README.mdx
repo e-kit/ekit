@@ -1,0 +1,76 @@
+---
+name: Event
+menu: 'Components'
+route: /ekit/event
+---
+
+import { Props } from 'docz';
+import { EventWrapper } from './src/EventWrapper.tsx';
+
+# Event
+
+观察者模式封装。
+
+```
+npm i -S @ekit/event
+```
+
+所有事件共享一个观察者模式，所以请确保事件名命名唯一性，建议使用:
+
+```shell
+e:moduleName.eventName
+```
+
+例如:
+
+```shell
+e:User.login
+e:User.logout
+```
+
+## 2. API
+
+## - 2.1 useEvent
+
+使用 useEvent Hooks，实现了 Emit & Callback 类型的打通，以及事件的自动解除绑定。
+
+```ts
+import { useEvent } from '@ekit/event';
+
+...
+const [emit, off] = useEvent('e:eventName', callback);
+...
+```
+
+## - 2.2. EventWrapper
+
+对于 Class 组件使用的装饰器。
+
+### EventWrapper Props
+
+<Props of={EventWrapper} />
+
+### 示例
+
+```ts
+import React from 'react';
+import EventWrapperDecorator, { EventCenter, IEventWrapperProps } from '@ekit/event';
+
+@EventWrapperDecorator
+class A extends React.Component<{} & IEventWrapperProps> {
+  public constructor(props) {
+    super(props);
+    props.on('LOAD', () => console.log('load'));
+  }
+
+  public componentDidMount() {
+    this.props.emit('LOAD');
+    // or 全局广播
+    EventCenter.emit('LOAD');
+  }
+
+  public render() {
+    return null;
+  }
+}
+```

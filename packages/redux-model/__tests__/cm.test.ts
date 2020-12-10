@@ -33,7 +33,7 @@ describe('cm ok', () => {
       namespace: 'a',
       state: [] as number[],
       reducers: {
-        doA: (state) => {
+        doA: state => {
           state.push(1);
         }
       },
@@ -44,7 +44,7 @@ describe('cm ok', () => {
         namespace: 'b',
         state: [] as number[],
         reducers: {
-          doA: (state) => {
+          doA: state => {
             state.push(1);
           }
         },

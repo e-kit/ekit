@@ -14,27 +14,57 @@ import factory, {
   ModernType,
   putWrapper,
   IEffectFactory,
-  TKIT_EFFECT
+  TKIT_EFFECT,
+  ItNBPut,
+  TKIT_NB_EFFECT,
+  fakeUtilsThrowErrorIfInvoked,
+  TKIT_SUB_EFFECT
 } from '@ekit/model-factory';
 import { ReduxModelEffects, ReduxModelEffectsUtils } from './types';
 import { effectWrapper } from './effectWrapper';
 
 const { all, call } = sagaEffects;
 
-const noop = () => void 0;
-
+// for Redux Saga V0
 export function* globalPut<A>(action: A): any {
-  // 移除 @src/store
+  action[TKIT_SUB_EFFECT] = true;
   const res = yield sagaEffects.put(action as any);
   return res && typeof res['then'] === 'function' ? yield res : res;
 }
 
+// export function* globalPut<A>(action: A): any {
+//   try {
+//     action[TKIT_SUB_EFFECT] = true;
+//     const res = yield sagaEffects.put(action as any);
+//     return res && typeof res['then'] === 'function' ? yield res : res;
+//   } catch (error) {
+//     // TODO: not quite sure
+//     return yield sagaEffects.cancel();
+//   }
+// }
+
+// TODO: for Redux Saga v1
+// action[TKIT_SUB_EFFECT] = true;
+// if (process.env.NODE_ENV === 'development' && typeof sagaEffects.putResolve === 'undefined') {
+//   throw Error(`1.*.* Version of Redux Saga Required`);
+// }
+// export const globalPut = sagaEffects.putResolve as any;
+
 const wrappedPut = putWrapper(globalPut);
 
-/** 用以替代 redux-saga put 的 typed 的 tPut */
+/** TypeSafe tPut Blocking */
 export const tPut: ItPut = (effect: string, ...args: any[]) => {
   return wrappedPut(effect, ...args);
 };
+
+const wrappedNBPut = putWrapper(<A>(action: A): any => {
+  // 非阻塞
+  action[TKIT_NB_EFFECT] = true;
+  return sagaEffects.put(action as any);
+});
+
+/** TypeSafe tNBPut Non Blocking */
+export const tNBPut: ItNBPut = (effect: string, ...args: any[]) => wrappedNBPut(effect, ...args);
 
 /** 用以替代 redux-saga call 的 typed tCall */
 export const tCall: ItCall = <E extends (...args: any[]) => any>(
@@ -53,7 +83,6 @@ export const tCall: ItCall = <E extends (...args: any[]) => any>(
  * @param model.reducers 推导reducers和同步actions
  * @param model.effects 副作用，推导异步actions
  */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function createModel<M, R extends Reducers<M>, E extends ReduxModelEffects>(model: {
   /** 命名空间 */
   namespace: string;
@@ -72,19 +101,22 @@ export default function createModel<M, R extends Reducers<M>, E extends ReduxMod
     /** 仅generator适用 */
     tPut,
     /** 仅generator适用 */
+    tNBPut,
+    /** 仅generator适用 */
     tCall,
-    asyncSelect: noop as any,
-    asyncPut: noop as any
+    asyncSelect: fakeUtilsThrowErrorIfInvoked as any,
+    asyncPut: fakeUtilsThrowErrorIfInvoked as any,
+    asyncNBPut: fakeUtilsThrowErrorIfInvoked as any
   };
 
   if (process.env.NODE_ENV === 'development') {
     [
       ...Object.keys(model.reducers),
       ...((model.effects && Object.keys(model.effects)) || [])
-    ].forEach((action) => {
+    ].forEach(action => {
       if (action in createModel.ActionNameMap) {
         throw Error(
-          `${action} 已存在于 model ${createModel.ActionNameMap[action]}，存在不可控风险`
+          `model ${namespace} ${action} 已存在于 model ${createModel.ActionNameMap[action]}，存在不可控风险`
         );
       }
       createModel.ActionNameMap[action] = namespace;

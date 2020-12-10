@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import { Spin, Modal, Button, Input, message } from 'antd';
+import 'antd/dist/antd.css';
 import { AjaxPromise, TkitAjaxFunction, promiseFactory } from '@ekit/ajax';
 import Async from '../src/Async';
 import {
@@ -52,7 +53,7 @@ export default function Example() {
     <div>
       <Async
         form={FormFaker}
-        loading={(arg) => <Spin spinning={arg.status.isFetch} />}
+        loading={arg => <Spin spinning={arg.status.isFetch} />}
         modal={Modal}
         tips={({ type, message: msg }) => message[type](msg)}
       />

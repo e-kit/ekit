@@ -20,7 +20,6 @@ import {
 } from './types';
 import { ModernType, defaultEffectOptions } from './consts';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function factory<
   M,
   R extends Reducers<M>,
@@ -89,14 +88,14 @@ export default function factory<
         ? <S>(state: S, action: AbstractAction) => {
             return {
               ...state,
-              [namespace]: produce(state[namespace], (draftState: any) =>
+              [namespace]: produce(state[namespace], (draftState: Readonly<M>) =>
                 reducers[doSomething](draftState, action)
               )
             };
           }
         : modern === ModernType.HookModern
         ? <S>(state: S, action: AbstractAction) => {
-            // cheat
+            // FIXME: as any
             return produce(state, (draftState) => reducers[doSomething](draftState as any, action));
           }
         : reducers[doSomething];
@@ -133,7 +132,7 @@ export default function factory<
     actions,
     reducers: handleActions(reducersMap, state),
     TYPES: TYPES as ActionTypes,
-    effects: { ...effects }, // force no undefined
+    effects: { ...effects } as E, // force no undefined
     namespace,
     __model: model
   };

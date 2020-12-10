@@ -99,7 +99,7 @@ export class GraphQLClient {
     }
     const cancel = opt && opt.cancel;
     if (cancel) {
-      config.cancelToken = new axios.CancelToken((c) => {
+      config.cancelToken = new axios.CancelToken(c => {
         cancel.then(c, emptyFunc);
       });
     }

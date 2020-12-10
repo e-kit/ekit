@@ -1,0 +1,32 @@
+---
+name: Actions
+menu: 'Redux'
+route: /ekit/actions
+---
+
+# Actions
+
+```shell
+npm i -S @ekit/actions
+```
+
+## 示例
+
+```typescript
+import { createAction, Action, handleActions, bindActionCreators, Dispatch } from '@ekit/actions';
+
+const actions = {
+  doSomething: () => createAction('DO', {})
+};
+
+const reducer = handleActions({
+  DO: <S>(s: S, action: Action<{}>) => ({ ...s })
+});
+
+// bindActionCreators 通过 reselect 添加了 cache
+function mapDispatchToProps(dispatch: Dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+```

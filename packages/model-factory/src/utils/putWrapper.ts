@@ -1,3 +1,10 @@
+/**
+ * @file: description
+ * @author: yangqianjun
+ * @Date: 2020-02-06 18:09:08
+ * @LastEditors: yangqianjun
+ * @LastEditTime: 2020-02-07 20:48:18
+ */
 
 import { ItPut, Tction } from '../types';
 

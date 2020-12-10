@@ -1,9 +1,9 @@
 {
   "name": "@ekit/event-center",
-  "version": "0.0.1",
-  "description": "event center",
-  "author": "yangqianjun",
-  "homepage": "https://github.com/e-kit/ekittree/master/packages/event-center#readme",
+  "version": "3.0.2",
+  "description": "> TODO: description",
+  "author": "yangqianjun <751558483@qq.com>",
+  "homepage": "",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
@@ -13,20 +13,23 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gogoyqj/ekit.git"
+    "url": ""
   },
   "scripts": {
-    "test": "exit 0",
+    "test": "",
     "build": "tsc --project tsconfig.prod.json"
   },
-  "bugs": {
-    "url": "https://github.com/e-kit/ekitissues"
+  "peerDependencies": {
+    "tslib": "*"
   },
   "dependencies": {
-    "eventemitter3": "^4.0.4"
+    "eventemitter3": "^4.0.0",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@ekit/jest-config": "file:../jest-config",
+    "@ekit/typescript-config": "file:../typescript-config"
   }
 }

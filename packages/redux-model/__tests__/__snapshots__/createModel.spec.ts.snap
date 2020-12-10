@@ -5,61 +5,57 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateAsyncModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
 `;
 
-exports[
-  `utils/createModel async work ok check sample/testCreateAsyncModelOK.ts work ok 1`
-] = `Array []`;
+exports[`utils/createModel async work ok check sample/testCreateAsyncModelOK.ts work ok 1`] = `Array []`;
 
 exports[`utils/createModel async work ok check sample/testCreateMixAsyncModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/asyncFactorySamples/testCreateMixAsyncModelFail.ts",
+    "fileName": "asyncFactorySamples/testCreateMixAsyncModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
 `;
 
-exports[
-  `utils/createModel async work ok check sample/testCreateMixAsyncModelOK.ts work ok 1`
-] = `Array []`;
+exports[`utils/createModel async work ok check sample/testCreateMixAsyncModelOK.ts work ok 1`] = `Array []`;
 
 exports[`utils/createModel work ok check sample/testCreateModelFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<string>) => { id: string; name: string; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ id: string; name: string; }' and 'State' are incompatible.
     The types of 'id' are incompatible between these types.
@@ -68,7 +64,7 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<{ user: { id: string; }; }>) => { id: string; name: string; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ id: string; name: string; }' and 'State' are incompatible.
     The types of 'id' are incompatible between these types.
@@ -77,13 +73,13 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<number>) => { name: number; id: number; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ name: number; id: number; }' and 'State' are incompatible.
     The types of 'name' are incompatible between these types.
@@ -92,7 +88,7 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "__tests__/createModelSamples/testCreateModelFail.ts",
+    "fileName": "createModelSamples/testCreateModelFail.ts",
     "messageText": "Type '<P extends AbstractAction>(state: Readonly<State>, action: Tction<{ user: { name: number; }; }>) => { name: number; id: number; }' is not assignable to type '<P extends AbstractAction>(state: Readonly<State>, action: P) => State'.
   Call signature return types '{ name: number; id: number; }' and 'State' are incompatible.
     The types of 'name' are incompatible between these types.
@@ -108,22 +104,20 @@ Array [
   Object {
     "category": 1,
     "code": 2540,
-    "fileName": "__tests__/createModelSamples/testCreateModelStateReadOnlyFail.ts",
+    "fileName": "createModelSamples/testCreateModelStateReadOnlyFail.ts",
     "messageText": "Cannot assign to 'id' because it is a read-only property.",
   },
 ]
 `;
 
-exports[
-  `utils/createModel work ok check sample/testCreateModelStateReadOnlyOK.ts work ok 1`
-] = `Array []`;
+exports[`utils/createModel work ok check sample/testCreateModelStateReadOnlyOK.ts work ok 1`] = `Array []`;
 
 exports[`utils/createModel work ok check sample/testCreateModelTYPESFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2339,
-    "fileName": "__tests__/createModelSamples/testCreateModelTYPESFail.ts",
+    "fileName": "createModelSamples/testCreateModelTYPESFail.ts",
     "messageText": "Property 'a' does not exist on type '{ testNoArguments: string; testOneArguments: string; } & { testAsyncNoArguments: string; testAsyncOneArguments: string; }'.",
   },
 ]
@@ -136,13 +130,13 @@ Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallInModelFail.ts",
+    "fileName": "createModelSamples/testPutCallInModelFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2769,
-    "fileName": "__tests__/createModelSamples/testPutCallInModelFail.ts",
+    "fileName": "createModelSamples/testPutCallInModelFail.ts",
     "messageText": "No overload matches this call.
   Overload 1 of 4, '(effect: string | Tction<any>): Promise<unknown>', gave the following error.
     Argument of type '<P_1 extends Tction<string>>(payload: P_1[\\"payload\\"]) => Promise<number>' is not assignable to parameter of type 'string | Tction<any>'.
@@ -160,19 +154,19 @@ Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallOutModelFail.ts",
+    "fileName": "createModelSamples/testPutCallOutModelFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallOutModelFail.ts",
+    "fileName": "createModelSamples/testPutCallOutModelFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2769,
-    "fileName": "__tests__/createModelSamples/testPutCallOutModelFail.ts",
+    "fileName": "createModelSamples/testPutCallOutModelFail.ts",
     "messageText": "No overload matches this call.
   Overload 1 of 4, '(effect: string | Tction<any>): Promise<unknown>', gave the following error.
     Argument of type '<P extends Tction<string>>(payload: P[\\"payload\\"]) => P' is not assignable to parameter of type 'string | Tction<any>'.
@@ -183,7 +177,7 @@ Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallOutModelFail.ts",
+    "fileName": "createModelSamples/testPutCallOutModelFail.ts",
     "messageText": "Argument of type '<P extends Tction<string>>(payload: P[\\"payload\\"]) => P' is not assignable to parameter of type '() => any'.",
   },
 ]
@@ -196,63 +190,59 @@ Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallWithOverloadFail.ts",
+    "fileName": "createModelSamples/testPutCallWithOverloadFail.ts",
     "messageText": "Argument of type '2' is not assignable to parameter of type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallWithOverloadFail.ts",
+    "fileName": "createModelSamples/testPutCallWithOverloadFail.ts",
     "messageText": "Argument of type '2' is not assignable to parameter of type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallWithOverloadFail.ts",
+    "fileName": "createModelSamples/testPutCallWithOverloadFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testPutCallWithOverloadFail.ts",
+    "fileName": "createModelSamples/testPutCallWithOverloadFail.ts",
     "messageText": "Argument of type '2' is not assignable to parameter of type 'string'.",
   },
 ]
 `;
 
-exports[
-  `utils/createModel work ok check sample/testPutCallWithOverloadOK.ts work ok 1`
-] = `Array []`;
+exports[`utils/createModel work ok check sample/testPutCallWithOverloadOK.ts work ok 1`] = `Array []`;
 
 exports[`utils/createModel work ok check sample/testWithEffectsPutAndCallFail.ts work ok 1`] = `
 Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testWithEffectsPutAndCallFail.ts",
+    "fileName": "createModelSamples/testWithEffectsPutAndCallFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "__tests__/createModelSamples/testWithEffectsPutAndCallFail.ts",
+    "fileName": "createModelSamples/testWithEffectsPutAndCallFail.ts",
     "messageText": "Argument of type '\\"\\"' is not assignable to parameter of type 'never'.",
   },
   Object {
     "category": 1,
     "code": 2554,
-    "fileName": "__tests__/createModelSamples/testWithEffectsPutAndCallFail.ts",
+    "fileName": "createModelSamples/testWithEffectsPutAndCallFail.ts",
     "messageText": "Expected 2 arguments, but got 3.",
   },
   Object {
     "category": 1,
     "code": 2554,
-    "fileName": "__tests__/createModelSamples/testWithEffectsPutAndCallFail.ts",
+    "fileName": "createModelSamples/testWithEffectsPutAndCallFail.ts",
     "messageText": "Expected 2 arguments, but got 3.",
   },
 ]
 `;
 
-exports[
-  `utils/createModel work ok check sample/testWithEffectsPutAndCallOK.ts work ok 1`
-] = `Array []`;
+exports[`utils/createModel work ok check sample/testWithEffectsPutAndCallOK.ts work ok 1`] = `Array []`;

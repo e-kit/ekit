@@ -6,7 +6,7 @@
  * @LastEditTime: 2019-12-23 18:20:53
  */
 import React, { useEffect, useMemo } from 'react';
-import EventCenter from '@ekit/event-center';
+import { EventCenter } from '@ekit/event';
 import { useAsync, UseAsyncConfig } from './useAsync';
 import { AsyncStatus, AsyncFormProps, AsyncModalProps, asyncModel } from './asyncModel';
 import {
@@ -34,7 +34,6 @@ export interface AsyncProps {
 }
 
 /** 异步操作容器 */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function Async(props: AsyncProps) {
   const { loading: Loading, modal: Modal, form: Form, tips, sharedLoading: SL } = props;
 

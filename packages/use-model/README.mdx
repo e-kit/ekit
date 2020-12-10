@@ -1,0 +1,66 @@
+---
+name: Use Model
+menu: 'Redux'
+route: /ekit/use-model
+---
+
+# Use Model
+
+Tkit Hooks Model 封装。
+
+```
+npm i -S @ekit/use-model
+```
+
+## MM
+
+通过 MM 创建集成了 Immer 局部 Hooks Model。通过 M 创建未集成 Immer 的版本。
+
+## - 示例
+
+```ts
+import { Tction, MM, M } from '@ekit/use-model';
+
+export const UserModel = MM({
+  namespace: 'test',
+  state: {
+    username: ''
+  },
+  reducers: {
+    doRename: (state, action: Tction<{ username: string }>) => {
+      state.username = action.payload.username;
+    }
+  },
+  effects: {
+    doFetchName: async ({ tPut }, action: Tction<{ time: number }>): Promise<{}> => {
+      const username = await new Promise((rs) => rs(`me${action.payload.time}`));
+      return tPut(UserModel.actions.doRename, { username });
+    }
+  }
+});
+```
+
+## useModel
+
+useModel Hooks，消费 Hooks Model。
+
+## - 示例
+
+```tsx
+import { useModel, bindDispatchToAction } from '@ekit/use-model';
+
+const MySFCComponent = (props) => {
+  const [store, actions] = useModel(UserModel, props.data);
+  return (
+    <button onClick={() => actions.doFetchName({ time: 2 })}>{store.userModel.username}</button>
+  );
+};
+```
+
+## 调试工具
+
+开启 Hooks Model 开发阶段运行日志打印:
+
+```ts
+window.__TKIT_USE_MODEL_LOGGER__ = console.log;
+```

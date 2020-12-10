@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createModel works ok doBlockingOK_BlockingERROR works ok: doBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doBlockingOK_BlockingERROR\\",\\"payload\\":\\"doBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doBlockingOK_BlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doBlockingOK_BlockingERROR 1 1",
+  "doAsyncBlockingaseEffectOK: doBlockingOK_BlockingERROR 1 2 \\"OK doAsyncBlockingaseEffectOK: doBlockingOK_BlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doBlockingOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doBlockingOK_BlockingERROR ERROR doAsyncBlockingaseEffectError: doBlockingOK_BlockingERROR 1 3",
+  "ERROR doAsyncBlockingaseEffectError: doBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doBlockingOK_NonBlockingERROR works ok: doBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doBlockingOK_NonBlockingERROR 1 1",
+  "doAsyncBlockingaseEffectOK: doBlockingOK_NonBlockingERROR 1 2 \\"OK doAsyncBlockingaseEffectOK: doBlockingOK_NonBlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doBlockingOK_NonBlockingERROR 1 3 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+  "doAsyncBlockingaseEffectError: doBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok doGenBlockingOK_BlockingERROR works ok: doGenBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBlockingOK_BlockingERROR\\",\\"payload\\":\\"doGenBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenBlockingOK_BlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenBlockingOK_BlockingERROR 1 1",
+  "doGenBaseEffectOK: doGenBlockingOK_BlockingERROR 1 2 \\"OK doGenBaseEffectOK: doGenBlockingOK_BlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: doGenBlockingOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBlockingOK_BlockingERROR ERROR doGenBaseEffectError: doGenBlockingOK_BlockingERROR 1 3",
+  "ERROR doGenBaseEffectError: doGenBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doGenBlockingOK_NonBlockingERROR works ok: doGenBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"doGenBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenBlockingOK_NonBlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenBlockingOK_NonBlockingERROR 1 1",
+  "doGenBaseEffectOK: doGenBlockingOK_NonBlockingERROR 1 2 \\"OK doGenBaseEffectOK: doGenBlockingOK_NonBlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectError: doGenBlockingOK_NonBlockingERROR 1 3 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+  "doGenBaseEffect: doGenBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok doGenNBERROR_BlockingOK works ok: doGenNBERROR_BlockingOK 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenNBERROR_BlockingOK\\",\\"payload\\":\\"doGenNBERROR_BlockingOK 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBERROR_BlockingOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectError: doGenNBERROR_BlockingOK 1 1 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBERROR_BlockingOK 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: doGenNBERROR_BlockingOK 1 2",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenNBERROR_BlockingOK 1 2\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenNBERROR_BlockingOK 1 2",
+  "doGenBaseEffectOK: doGenNBERROR_BlockingOK 1 3",
+  "doGenBaseEffectOK: doGenNBERROR_BlockingOK 1 4 \\"OK doGenBaseEffectOK: doGenNBERROR_BlockingOK 1 3\\"",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBERROR_BlockingOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doGenNBOK_BlockingERROR works ok: doGenNBOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenNBOK_BlockingERROR\\",\\"payload\\":\\"doGenNBOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenNBOK_BlockingERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenNBOK_BlockingERROR 1 2",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: doGenNBOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenNBOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_BlockingERROR\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenNBOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenNBOK_BlockingERROR ERROR doGenBaseEffectError: doGenNBOK_BlockingERROR 1 3",
+  "ERROR doGenBaseEffectError: doGenNBOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doGenNBOK_NonBlockingERROR works ok: doGenNBOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenNBOK_NonBlockingERROR\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenNBOK_NonBlockingERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectError: doGenNBOK_NonBlockingERROR 1 2 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "{\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenNBOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: doGenNBOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenNBOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenNBOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok doGenNBOK_NonBlockingERROR_ERROR works ok: doGenNBOK_NonBlockingERROR_ERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenNBOK_NonBlockingERROR_ERROR\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR_ERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: doGenNBOK_NonBlockingERROR_ERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectError: doGenNBOK_NonBlockingERROR_ERROR 1 2 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"doGenNBOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_NonBlockingERROR_ERROR\\",\\"error\\":\\"ERROR: doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenNBOK_NonBlockingERROR_ERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenNBOK_NonBlockingERROR_ERROR ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  undefined,
+  "doGenBaseEffectOK: doGenNBOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: doGenNBOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: doGenNBOK_NonBlockingERROR_ERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: doGenNBOK_NonBlockingERROR_ERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok doNonBlockingERROR_BlockingOK works ok: doNonBlockingERROR_BlockingOK 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doNonBlockingERROR_BlockingOK\\",\\"payload\\":\\"doNonBlockingERROR_BlockingOK 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingERROR_BlockingOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doNonBlockingERROR_BlockingOK 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingERROR_BlockingOK 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doNonBlockingERROR_BlockingOK 1 2",
+  "doAsyncBlockingaseEffectOK: doNonBlockingERROR_BlockingOK 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doNonBlockingERROR_BlockingOK 1 2\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doNonBlockingERROR_BlockingOK 1 2",
+  "doAsyncBlockingaseEffectOK: doNonBlockingERROR_BlockingOK 1 4 \\"OK doAsyncBlockingaseEffectOK: doNonBlockingERROR_BlockingOK 1 3\\"",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingERROR_BlockingOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doNonBlockingOK_BlockingERROR works ok: doNonBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doNonBlockingOK_BlockingERROR\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_BlockingERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_BlockingERROR 1 2",
+  "doAsyncBlockingaseEffectError: doNonBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doNonBlockingOK_BlockingERROR ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_BlockingERROR 1 3",
+  "ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok doNonBlockingOK_NonBlockingERROR works ok: doNonBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doNonBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_NonBlockingERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR 1 2 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "{\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_NonBlockingERROR 1 -1",
+  "doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok doNonBlockingOK_NonBlockingERROR_ERROR works ok: doNonBlockingOK_NonBlockingERROR_ERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/doNonBlockingOK_NonBlockingERROR_ERROR\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_NonBlockingERROR_ERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR_ERROR 1 2 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"doNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_NonBlockingERROR_ERROR\\",\\"error\\":\\"ERROR: doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doNonBlockingOK_NonBlockingERROR_ERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doNonBlockingOK_NonBlockingERROR_ERROR ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  undefined,
+  "doAsyncBlockingaseEffectOK: doNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: doNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genAsyncBlockingOK_BlockingERROR works ok: genAsyncBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncBlockingOK_BlockingERROR\\",\\"payload\\":\\"genAsyncBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncBlockingOK_BlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncBlockingOK_BlockingERROR 1 1",
+  "doAsyncBlockingaseEffectOK: genAsyncBlockingOK_BlockingERROR 1 2 \\"OK doAsyncBlockingaseEffectOK: genAsyncBlockingOK_BlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncBlockingOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genAsyncBlockingOK_BlockingERROR ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_BlockingERROR 1 3",
+  "ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genAsyncBlockingOK_NonBlockingERROR works ok: genAsyncBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"genAsyncBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncBlockingOK_NonBlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncBlockingOK_NonBlockingERROR 1 1",
+  "doAsyncBlockingaseEffectOK: genAsyncBlockingOK_NonBlockingERROR 1 2 \\"OK doAsyncBlockingaseEffectOK: genAsyncBlockingOK_NonBlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncBlockingOK_NonBlockingERROR 1 3 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+  "doAsyncBlockingaseEffectError: genAsyncBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genAsyncNonBlockingERROR_BlockingOK works ok: genAsyncNonBlockingERROR_BlockingOK 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncNonBlockingERROR_BlockingOK\\",\\"payload\\":\\"genAsyncNonBlockingERROR_BlockingOK 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingERROR_BlockingOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingERROR_BlockingOK 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingERROR_BlockingOK 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingERROR_BlockingOK 1 2",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingERROR_BlockingOK 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingERROR_BlockingOK 1 2\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingERROR_BlockingOK 1 2",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingERROR_BlockingOK 1 4 \\"OK doAsyncBlockingaseEffectOK: genAsyncNonBlockingERROR_BlockingOK 1 3\\"",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingERROR_BlockingOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genAsyncNonBlockingOK_BlockingERROR works ok: genAsyncNonBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncNonBlockingOK_BlockingERROR\\",\\"payload\\":\\"genAsyncNonBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_BlockingERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_BlockingERROR 1 2",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genAsyncNonBlockingOK_BlockingERROR ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_BlockingERROR 1 3",
+  "ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genAsyncNonBlockingOK_NonBlockingERROR works ok: genAsyncNonBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_NonBlockingERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR 1 2 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "{\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_NonBlockingERROR 1 -1",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genAsyncNonBlockingOK_NonBlockingERROR_ERROR works ok: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR_ERROR\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 1 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 2 {\\"type\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"payload\\":\\"genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR_ERROR\\",\\"error\\":\\"ERROR: doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genAsyncNonBlockingOK_NonBlockingERROR_ERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genAsyncNonBlockingOK_NonBlockingERROR_ERROR ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  undefined,
+  "doAsyncBlockingaseEffectOK: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"error\\":\\"ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doAsyncBlockingaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doAsyncBlockingaseEffectError ERROR doAsyncBlockingaseEffectError: genAsyncNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genBlockingOK_BlockingERROR works ok: genBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genBlockingOK_BlockingERROR\\",\\"payload\\":\\"genBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genBlockingOK_BlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genBlockingOK_BlockingERROR 1 1",
+  "doGenBaseEffectOK: genBlockingOK_BlockingERROR 1 2 \\"OK doGenBaseEffectOK: genBlockingOK_BlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: genBlockingOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doGenBaseEffectError: genBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genBlockingOK_BlockingERROR ERROR doGenBaseEffectError: genBlockingOK_BlockingERROR 1 3",
+  "ERROR doGenBaseEffectError: genBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genBlockingOK_NonBlockingERROR works ok: genBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"genBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genBlockingOK_NonBlockingERROR 1 1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genBlockingOK_NonBlockingERROR 1 1",
+  "doGenBaseEffectOK: genBlockingOK_NonBlockingERROR 1 2 \\"OK doGenBaseEffectOK: genBlockingOK_NonBlockingERROR 1 1\\"",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectError: genBlockingOK_NonBlockingERROR 1 3 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+  "doGenBaseEffect: genBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: genBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genNonBlockingERROR_BlockingOK works ok: genNonBlockingERROR_BlockingOK 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genNonBlockingERROR_BlockingOK\\",\\"payload\\":\\"genNonBlockingERROR_BlockingOK 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingERROR_BlockingOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectError: genNonBlockingERROR_BlockingOK 1 1 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingERROR_BlockingOK 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingERROR_BlockingOK 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: genNonBlockingERROR_BlockingOK 1 2",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: genNonBlockingERROR_BlockingOK 1 2\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genNonBlockingERROR_BlockingOK 1 2",
+  "doGenBaseEffectOK: genNonBlockingERROR_BlockingOK 1 3",
+  "doGenBaseEffectOK: genNonBlockingERROR_BlockingOK 1 4 \\"OK doGenBaseEffectOK: genNonBlockingERROR_BlockingOK 1 3\\"",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingERROR_BlockingOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genNonBlockingOK_BlockingERROR works ok: genNonBlockingOK_BlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genNonBlockingOK_BlockingERROR\\",\\"payload\\":\\"genNonBlockingOK_BlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_BlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genNonBlockingOK_BlockingERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_BlockingERROR 1 2\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_BlockingERROR 1 3\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genNonBlockingOK_BlockingERROR 1 2",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: genNonBlockingOK_BlockingERROR 1 3",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genNonBlockingOK_BlockingERROR 1 3",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_BlockingERROR\\",\\"error\\":\\"ERROR doGenBaseEffectError: genNonBlockingOK_BlockingERROR 1 3\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_BlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genNonBlockingOK_BlockingERROR ERROR doGenBaseEffectError: genNonBlockingOK_BlockingERROR 1 3",
+  "ERROR doGenBaseEffectError: genNonBlockingOK_BlockingERROR 1 3",
+  undefined,
+]
+`;
+
+exports[`createModel works ok genNonBlockingOK_NonBlockingERROR works ok: genNonBlockingOK_NonBlockingERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genNonBlockingOK_NonBlockingERROR\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_NonBlockingERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genNonBlockingOK_NonBlockingERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR 1 2 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_NonBlockingERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "{\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genNonBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: genNonBlockingOK_NonBlockingERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR 1 -1",
+]
+`;
+
+exports[`createModel works ok genNonBlockingOK_NonBlockingERROR_ERROR works ok: genNonBlockingOK_NonBlockingERROR_ERROR 1`] = `
+Array [
+  "middleWare watched action: {\\"type\\":\\"userModel/genNonBlockingOK_NonBlockingERROR_ERROR\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR_ERROR 1\\",\\"__TKIT_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectOK: genNonBlockingOK_NonBlockingERROR_ERROR 1 1 {\\"type\\":\\"userModel/doGenBaseEffectOK\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR_ERROR 1 2 {\\"type\\":\\"userModel/doGenBaseEffectError\\",\\"payload\\":\\"genNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\",\\"__TKIT_EFFECT__\\":true,\\"__TKIT_NB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_START\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_NonBlockingERROR_ERROR\\",\\"error\\":\\"ERROR: doNonBlockingOK_NonBlockingERROR_ERROR\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/genNonBlockingOK_NonBlockingERROR_ERROR\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/genNonBlockingOK_NonBlockingERROR_ERROR ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  "ERROR: doNonBlockingOK_NonBlockingERROR_ERROR",
+  undefined,
+  "doGenBaseEffectOK: genNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectOK\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "doGenBaseEffect: genNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_ERROR\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"error\\":\\"ERROR doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR_ERROR 1 -1\\"},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "middleWare watched action: {\\"type\\":\\"EFFECTS_END\\",\\"payload\\":{\\"effectName\\":\\"userModel/doGenBaseEffectError\\",\\"cancelled\\":false},\\"__TKIT_SUB_EFFECT__\\":true}",
+  "EFFECTS_ERROR: userModel/doGenBaseEffectError ERROR doGenBaseEffectError: genNonBlockingOK_NonBlockingERROR_ERROR 1 -1",
+]
+`;

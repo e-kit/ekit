@@ -27,6 +27,7 @@
   },
   "peerDependencies": {
     "jest": "^26.1.0",
-    "@types/jest": "^26.0.7"
+    "@types/jest": "^26.0.7",
+    "tslib": "*"
   }
 }

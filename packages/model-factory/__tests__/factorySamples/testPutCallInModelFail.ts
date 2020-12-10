@@ -1,3 +1,10 @@
+/**
+ * @file: description
+ * @author: yangqianjun
+ * @Date: 2019-12-17 20:16:34
+ * @LastEditors: yangqianjun
+ * @LastEditTime: 2020-02-07 19:54:58
+ */
 import factory, { Tction } from 'src/index';
 import { modelWithEffectsState } from './states';
 

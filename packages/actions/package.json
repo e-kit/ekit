@@ -24,7 +24,11 @@
   "bugs": {
     "url": "https://github.com/e-kit/ekitissues"
   },
+  "peerDependencies": {
+    "tslib": "*"
+  },
   "dependencies": {
+    "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
     "typesafe-actions": "^5.1.0"
   }

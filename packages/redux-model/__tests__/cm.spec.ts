@@ -10,8 +10,8 @@ import { parser } from '@ekit/typescript-type-tester';
 const files = 'testCMFail.ts testCMOK.ts'.split(' ');
 
 describe('utils/useModel work ok', () => {
-  const errors = parser(files, `${process.cwd()}/__tests__/cmSamples`);
-  files.forEach((file) =>
+  const errors = parser(files, 'cmSamples');
+  files.forEach(file =>
     it(`check cmSamples/${file} work ok`, () => {
       const current = errors[file];
       if (file.match(/OK/)) {

@@ -10,7 +10,7 @@ import { parser } from '@ekit/typescript-type-tester';
 const files = 'responseOK.ts responseFail.ts'.split(' ');
 
 describe('@ekit/ajax work ok', () => {
-  const errors = parser(files, `${process.cwd()}/__tests__/samples`);
+  const errors = parser(files, 'samples');
   files.forEach((file) =>
     it(`check sample/${file} work ok`, () => {
       const current = errors[file];

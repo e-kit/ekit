@@ -11,7 +11,6 @@ import { CMReducers, ModernType } from '@ekit/model-factory';
 import { HooksModelEffects } from './types';
 import { M } from './m';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function MM<M, R extends CMReducers<M>, E extends HooksModelEffects>(model: {
   /** 命令空间，区分日志使用 */
   namespace: string;

@@ -29,6 +29,7 @@
     "url": "https://github.com/e-kit/ekitissues"
   },
   "peerDependencies": {
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.2",
+    "tslib": "*"
   }
 }

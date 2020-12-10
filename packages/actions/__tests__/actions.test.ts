@@ -1,4 +1,4 @@
-import { handleActions, createAction } from 'src/actions';
+import { handleActions, createAction, bindActionCreators } from 'src/actions';
 import {
   reducer,
   initialStore,
@@ -9,6 +9,10 @@ import {
 } from './actionsSamples/actionsOK';
 
 describe('@ekit/actions', () => {
+  it('should export redux ok', () => {
+    expect(typeof bindActionCreators).toEqual('function');
+  });
+
   it('should export typesafe-actions ok', () => {
     expect(typeof createAction).toEqual('function');
     expect(doSetUerName('yqj')).toEqual(doNewSetUerName('yqj'));

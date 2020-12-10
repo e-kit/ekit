@@ -1,3 +1,11 @@
+/**
+ * @file: description
+ * @author: yangqianjun
+ * @Date: 2020-02-07 17:41:31
+ * @LastEditors: yangqianjun
+ * @LastEditTime: 2020-02-07 18:33:09
+ */
+
 import * as sagaEffects from 'redux-saga/effects';
 import {
   BaseEffectsUtils,

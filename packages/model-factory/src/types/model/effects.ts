@@ -7,23 +7,30 @@
  */
 
 import { AbstractAction } from '../action';
-import { ItPut } from '../effects/put';
+import { ItNBPut, ItPut } from '../effects/put';
 
 export interface BaseEffectsUtils {
   namespace: string;
-  /** 仅generator适用 */
+  /** 仅适用 Generator，tPut 触发副作用是阻塞的，返回值是 Promise， */
   tPut: ItPut;
+  /** tNBPut 是非阻塞 tPut，返回值是 action */
+  tNBPut: ItNBPut;
   /** 仅ayns/await适用 */
   asyncPut: ItPut;
+  /** asyncNBPut 是非阻塞 asyncPut，返回值是 action */
+  asyncNBPut: ItNBPut;
 }
 
 /**
  * ====================== Hooks Model Effects ======================
  */
 
-export interface HooksModelEffectWithPayload<Utils extends BaseEffectsUtils> {
-  <P extends AbstractAction>(saga: Utils, action: P): Promise<any>;
-}
+export type HooksModelEffectWithPayload<Utils extends BaseEffectsUtils> = <
+  P extends AbstractAction
+>(
+  saga: Utils,
+  action: P
+) => Promise<any>;
 
 export type MixHooksModelEffectWithPayload<Utils extends BaseEffectsUtils> = [
   <P extends AbstractAction>(saga: Utils, action: P) => Promise<any>,

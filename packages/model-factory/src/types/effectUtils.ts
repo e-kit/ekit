@@ -1,3 +1,10 @@
+/**
+ * @file: description
+ * @author: yangqianjun
+ * @Date: 2020-02-07 11:04:55
+ * @LastEditors: yangqianjun
+ * @LastEditTime: 2020-02-07 15:31:16
+ */
 
 import { BaseEffectsUtils, EffectOptions } from './model/effects';
 
