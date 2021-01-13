@@ -23,7 +23,7 @@ export interface AsyncProps {
    * @deprecated 不推荐使用
    */
   loading?: React.ComponentType<{ status: AsyncStatus }>;
-  /** 全局加载效果组件【所有effect共用一个效果 */
+  /** 全局加载效果组件【所有effect共用一个效果】3.0.6+ */
   sharedLoading?: React.ComponentType;
   /** 显示副作用提示信息的函数 */
   tips?: (e: AsyncResultEventType) => any;
@@ -40,7 +40,7 @@ export default function Async(props: AsyncProps) {
   // IMP: 优化
   const config: UseAsyncConfig = useMemo(
     () => ({
-      renderForm: (props) => <Form {...props} />
+      renderForm: props => <Form {...props} />
     }),
     []
   );
@@ -84,7 +84,7 @@ export default function Async(props: AsyncProps) {
   }, [queue]);
 
   let loadingCount = 0;
-  const all = queue.map((status) => {
+  const all = queue.map(status => {
     const { ASYNC_ID, modalProps, isFetch, isModal, indicator, visible = true } = status;
     if (isModal) {
       return (

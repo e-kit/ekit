@@ -5,7 +5,7 @@
  * @LastEditors: yangqianjun
  * @LastEditTime: 2020-02-07 16:14:06
  */
-import { parser } from '@ekit/typescript-type-tester';
+import { parser } from './parser';
 
 describe('utils/createModel work ok', () => {
   const files = 'testCreateModelFail.ts testCreateModelOK.ts testCreateModelStateReadOnlyFail.ts testCreateModelStateReadOnlyOK.ts testCreateModelTYPESFail.ts testCreateModelTYPESOK.ts testPutCallInModelFail.ts testPutCallInModelOK.ts testPutCallOutModelFail.ts testPutCallOutModelOK.ts testPutCallWithOverloadFail.ts testPutCallWithOverloadOK.ts testWithEffectsPutAndCallFail.ts testWithEffectsPutAndCallOK.ts'.split(

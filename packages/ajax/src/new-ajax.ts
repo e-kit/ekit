@@ -47,11 +47,11 @@ const testUser =
   typeof location !== 'undefined' && qs.parse(location.search.split('?')[1]).testUser;
 export class WrappedFetch {
   /** ajax 方法 */
-  public ajax(
+  public ajax = (
     { method, url, data, form, query, header, extra, cancel, headers }: WrappedFetchParams,
     path?: string,
     basePath?: string
-  ) {
+  ) => {
     let config = {
       ...extra,
       method: method.toLowerCase(),
@@ -81,7 +81,10 @@ export class WrappedFetch {
           'Content-Type': 'application/x-www-form-urlencoded',
           ...config.headers
         },
-        data: qs.stringify(form)
+        data:
+          config.headers && config.headers['Content-Type'] === 'multipart/form-data'
+            ? form
+            : qs.stringify(form)
       };
     }
     const [{ resolve: cancelRequest }, internalCancel] = promiseFactory<string>();
@@ -103,12 +106,12 @@ export class WrappedFetch {
       })
       .then(res => res.data);
     if (this.autoCatch) {
-      prom = prom.catch(onStatusError);
+      prom = prom.catch(typeof this.autoCatch === 'function' ? this.autoCatch : onStatusError);
     }
     // IMP: 修复 tkit/service 设计上的硬伤
     prom['cancel'] = cancelRequest;
     return prom as Promise<any>;
-  }
+  };
 
   /** 接口传参校验 */
   public check<V>(value: V, name: string) {
@@ -122,9 +125,9 @@ export class WrappedFetch {
   }
 
   /**
-   * 是否默认 catch ajax 错误，默认开启，设置为 false，关闭 catch
+   * 是否默认 catch ajax 错误，默认开启，设置为 false，关闭 catch，支持配置成函数，替代默认的 onStatusError
    */
-  public autoCatch = true;
+  public autoCatch: boolean | typeof onStatusError = true;
 }
 
 export default new WrappedFetch();

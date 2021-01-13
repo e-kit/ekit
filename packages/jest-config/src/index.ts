@@ -10,7 +10,7 @@ const setupFiles = ensureFiles(
     '__tests__/setup.ts',
     './setup.js',
     '__tests__/setup.js'
-  ].map((file) => ensureFile(file, modulePath))
+  ].map(file => ensureFile(file, modulePath))
 );
 export const config: Partial<InitialOptions> = (module.exports = {
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],

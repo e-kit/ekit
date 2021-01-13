@@ -5,7 +5,7 @@
  * @LastEditors: yangqianjun
  * @LastEditTime: 2020-02-07 20:25:13
  */
-import { parser } from '@ekit/typescript-type-tester';
+import { parser } from './parser';
 
 describe('model-factory/createModel work ok', () => {
   const files = 'testCreateModelFail.ts testCreateModelOK.ts testCreateModelStateReadOnlyFail.ts testCreateModelStateReadOnlyOK.ts testCreateModelTYPESFail.ts testCreateModelTYPESOK.ts testPutCallInModelFail.ts testPutCallInModelOK.ts testCreateModelNBFail.ts testCreateModelNBOK.ts'.split(

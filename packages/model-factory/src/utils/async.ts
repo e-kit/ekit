@@ -38,11 +38,11 @@ export const FakeEffectFactory = ({
       res.code = 0;
       res.message = false;
       // IMP: 有些Effects可能是同步的，所以对rs的赋值必须是同步，而不是在fetch被调用的时候
-      const prom = new Promise((resolve) => {
+      const prom = new Promise(resolve => {
         // IMP: fakeEffect must be successful // 我有点记不得这是为啥了
         // loading 交互效果由 prom mock 出来，在真正的 fetch effect 执行完成后 resolve
         // FIX: 如果恒返回 fakeEffectRes，那么错误信息就显示不出来
-        rs = (r) => resolve(r || fakeEffectRes);
+        rs = r => resolve(r || fakeEffectRes);
       });
       const asyncPayload: IAsyncConfirmedMsg = {
         fetch: () => prom,

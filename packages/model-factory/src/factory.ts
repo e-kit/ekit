@@ -96,7 +96,7 @@ export default function factory<
         : modern === ModernType.HookModern
         ? <S>(state: S, action: AbstractAction) => {
             // FIXME: as any
-            return produce(state, (draftState) => reducers[doSomething](draftState as any, action));
+            return produce(state, draftState => reducers[doSomething](draftState as any, action));
           }
         : reducers[doSomething];
     actions[doSomething] = ((payload: Payload['payload']) =>

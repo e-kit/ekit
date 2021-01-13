@@ -21,9 +21,10 @@ export const emptyFunc = () => void 0;
 /** 检测 axios 响应状态 */
 export function onStatusError(error: AxiosError | Error | Cancel) {
   const resp = 'response' in error && error.response;
-  // IMP: 400客户端错误可能有response.data
+  // IMP: 400客户端错误可能有response.data 不规则的接口可能在 data 里塞除了 code 和 message 以外的字段
   const err = resp
     ? {
+        ...resp.data,
         code: resp.status,
         message: resp.data && resp.data.message ? resp.data.message : resp.statusText
       }

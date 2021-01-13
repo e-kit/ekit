@@ -119,7 +119,7 @@ export function bindDispatchToAction<A, E, M extends { actions: A; effects: E; T
  */
 const commonReducer: (reducer: <M>(prevState: M, action: Tction<any>) => M) => any =
   process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
-    ? (reducer) =>
+    ? reducer =>
         useMemo(
           () => <M>(prevState: M, action: Tction<any>) => {
             const newState = reducer(prevState, action);
@@ -136,7 +136,7 @@ const commonReducer: (reducer: <M>(prevState: M, action: Tction<any>) => M) => a
           },
           [reducer]
         )
-    : (reducer) => reducer;
+    : reducer => reducer;
 
 /**
  * Hooks Model

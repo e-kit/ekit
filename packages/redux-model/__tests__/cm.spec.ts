@@ -5,7 +5,7 @@
  * @LastEditors: yangqianjun
  * @LastEditTime: 2019-12-20 11:07:16
  */
-import { parser } from '@ekit/typescript-type-tester';
+import { parser } from './parser';
 
 const files = 'testCMFail.ts testCMOK.ts'.split(' ');
 

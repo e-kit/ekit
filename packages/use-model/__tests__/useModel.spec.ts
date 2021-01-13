@@ -6,7 +6,7 @@
  * @LastEditTime: 2019-12-20 12:42:11
  */
 
-import { parser } from '@ekit/typescript-type-tester';
+import { parser } from './parser';
 
 const files = 'testLocalModelFail.ts testLocalModelOK.ts testUseModelFail.ts testUseModelOK.ts testMMFail.ts testMMOK.ts'.split(
   ' '

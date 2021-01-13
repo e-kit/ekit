@@ -1,7 +1,7 @@
 /**
  * @description 确保接口类型正常
  */
-import { parser } from '@ekit/typescript-type-tester';
+import { parser } from './parser';
 
 const files = 'asyncFail.tsx asyncOK.tsx doFail.ts doOK.ts'.split(' ');
 
