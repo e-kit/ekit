@@ -1,6 +1,6 @@
 {
   "name": "@ekit/typescript-type-tester",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "test typescript type with jest and typescript",
   "keywords": [
     "typescript",

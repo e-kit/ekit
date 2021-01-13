@@ -1,6 +1,6 @@
 {
   "name": "@ekit/event-center",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "> TODO: description",
   "author": "yangqianjun <751558483@qq.com>",
   "homepage": "",
@@ -29,8 +29,8 @@
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@ekit/jest-config": "^0.0.2",
-    "@ekit/typescript-config": "^0.0.2"
+    "@ekit/jest-config": "^0.0.3",
+    "@ekit/typescript-config": "^0.0.3"
   },
   "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

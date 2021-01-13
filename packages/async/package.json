@@ -1,6 +1,6 @@
 {
   "name": "@ekit/async",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "async",
   "author": "yangqianjun",
   "homepage": "https://github.com/e-kit/ekittree/master/packages/async#readme",
@@ -29,10 +29,10 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/ajax": "^0.0.3",
+    "@ekit/ajax": "^0.0.4",
     "@ekit/event-center": "^0.0.1",
-    "@ekit/types": "^0.0.2",
-    "@ekit/use-model": "^0.0.2"
+    "@ekit/types": "^0.0.3",
+    "@ekit/use-model": "^0.0.3"
   },
   "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }

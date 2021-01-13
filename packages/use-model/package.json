@@ -1,6 +1,6 @@
 {
   "name": "@ekit/use-model",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "use model",
   "author": "yangqianjun",
   "homepage": "https://github.com/e-kit/ekittree/master/packages/use-model#readme",
@@ -31,7 +31,7 @@
     "tslib": "*"
   },
   "dependencies": {
-    "@ekit/model-factory": "^0.0.2"
+    "@ekit/model-factory": "^0.0.3"
   },
   "gitHead": "b395eb7c33153865c8fe74ff270b814d08805308"
 }
