@@ -1,7 +1,7 @@
 ---
 name: Ajax
 menu: Ajax
-route: /tkit/ajax
+route: /ekit/ajax
 ---
 
 import { Props } from 'docz';
@@ -9,7 +9,7 @@ import {
   ResultInterface,
   ParamsInterface,
   FetchInterface,
-  ExtraFetchParamsInterface
+  ExtraFetchParamsInterface,
 } from './__tests__/Doc.tsx';
 
 # Ajax
@@ -61,7 +61,7 @@ WrappedFetchParams 继承的 ExtraFetchParams 包含以下属性：
 ```ts
 ajax.ajax({
   method: 'GET',
-  url: '//xxxx.com'
+  url: '//xxxx.com',
 });
 ```
 
@@ -133,7 +133,7 @@ import axios from '@ekit/ajax/lib/axios';
 
 /** 配置请求头 */
 axios.defaults.headers = {
-  ['X-TOKEN']: 'something secret'
+  ['X-TOKEN']: 'something secret',
 };
 
 import qs from 'qs';
@@ -157,8 +157,8 @@ const endpoint = isProd ? '/graphql' : 'http://127.0.0.1/graphql';
 
 export const Client = new GraphQLClient(endpoint, {
   headers: {
-    'Access-Control-Allow-Origin': '*'
-  }
+    'Access-Control-Allow-Origin': '*',
+  },
 });
 
 /** xx services */
@@ -181,7 +181,7 @@ export function getSdk(client: GraphQLClient) {
       opt?: ExtraFetchParams
     ): AjaxPromise<DocListQueryRes> {
       return client.request<DocListQueryRes>(print(DocListDocument), variables, opt);
-    }
+    },
   };
 }
 ```

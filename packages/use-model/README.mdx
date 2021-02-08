@@ -1,7 +1,7 @@
 ---
 name: Use Model
 menu: 'Redux'
-route: /tkit/use-model
+route: /ekit/use-model
 ---
 
 # Use Model
@@ -24,19 +24,19 @@ import { Tction, MM, M } from '@ekit/use-model';
 export const UserModel = MM({
   namespace: 'test',
   state: {
-    username: ''
+    username: '',
   },
   reducers: {
     doRename: (state, action: Tction<{ username: string }>) => {
       state.username = action.payload.username;
-    }
+    },
   },
   effects: {
     doFetchName: async ({ tPut }, action: Tction<{ time: number }>): Promise<{}> => {
       const username = await new Promise((rs) => rs(`me${action.payload.time}`));
       return tPut(UserModel.actions.doRename, { username });
-    }
-  }
+    },
+  },
 });
 ```
 

@@ -1,7 +1,7 @@
 ---
 name: Async
 menu: 'Components'
-route: /tkit/async
+route: /ekit/async
 ---
 
 import { Props, Playground } from 'docz';
@@ -13,7 +13,7 @@ import Example, {
   FormFaker,
   ResultTypeFaker,
   AsyncFaker,
-  AsyncConfirmedFaker
+  AsyncConfirmedFaker,
 } from './__tests__/Example.tsx';
 
 # Async
@@ -88,7 +88,7 @@ AsyncForm 包含以下属性和方法：
 ```ts
 export class FakeForm extends React.Component<AsyncFormProps> implements AsyncForm {
   public static fakeData = {
-    name: 'skipper'
+    name: 'skipper',
   };
   public constructor(props: AsyncFormProps) {
     super(props);
@@ -290,7 +290,7 @@ import { AsyncResultEventType, doAsync, doAsyncConfirmed, Async } from '@ekit/as
 // @IMP: 表单组件
 export class FormFaker extends React.Component<AsyncFormProps> {
   public static fakeData = {
-    name: 'skipper'
+    name: 'skipper',
   };
   public constructor(props: AsyncFormProps) {
     super(props);
@@ -338,16 +338,16 @@ export default function Example() {
                         fetch: loadData,
                         modalProps: {
                           content: '你好',
-                          title: '2'
-                        }
+                          title: '2',
+                        },
                       });
                     }}
                   >
                     嵌套了
                   </Button>
                 </div>
-              )
-            }
+              ),
+            },
           });
         }}
       >
@@ -358,7 +358,7 @@ export default function Example() {
         onClick={() => {
           doAsyncConfirmed({
             fetch: loadData,
-            callback: console.log
+            callback: console.log,
           });
         }}
       >
@@ -370,7 +370,7 @@ export default function Example() {
           doAsyncConfirmed({
             fetch: loadData,
             callback: console.log,
-            indicator: null
+            indicator: null,
           });
         }}
       >

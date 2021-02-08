@@ -1,7 +1,7 @@
 ---
 name: Redux Model
 menu: 'Redux'
-route: /tkit/redux-model
+route: /ekit/redux-model
 ---
 
 # Redux Model
@@ -22,7 +22,7 @@ npm i -S @ekit/redux-model
 import createModel, { Tction, CM } from '@ekit/redux-model';
 
 export const userModelState = {
-  name: ''
+  name: '',
 };
 
 export const UserModel = CM({
@@ -32,9 +32,9 @@ export const UserModel = CM({
     /** 写入名字 */
     doSetName: (state, action: Tction<string>) => {
       state.name = action.payload;
-    }
+    },
   },
-  effects: {}
+  effects: {},
 });
 ```
 
@@ -48,7 +48,7 @@ export const UserModel = CM({
 import { userModelState } from './userModel';
 
 const initialState = {
-  userModel: userModelState
+  userModel: userModelState,
 };
 ```
 
