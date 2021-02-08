@@ -1,9 +1,5 @@
 /**
  * @file: description
- * @author: yangqianjun
- * @Date: 2019-12-17 20:16:34
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 14:25:14
  */
 import { ItCall, ItPut } from 'src/index';
 import { modelWithoutEffects } from './testCreateModelOK';

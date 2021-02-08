@@ -5,13 +5,13 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2769,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "No overload matches this call.
   Overload 1 of 4, '(effect: <P extends Tction<number>>(payload: P[\\"payload\\"]) => P, args: number): Promise<Tction<number>>', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -21,25 +21,25 @@ Array [
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "Argument of type '2' is not assignable to parameter of type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "Type '2' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2345,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "Argument of type '\\"2\\"' is not assignable to parameter of type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "cmSamples/testCMFail.ts",
+    "fileName": "__tests__/cmSamples/testCMFail.ts",
     "messageText": "Type '\\"2\\"' is not assignable to type 'number'.",
   },
 ]

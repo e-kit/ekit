@@ -5,7 +5,7 @@ export interface State {
 
 export const modelWithoutEffectsState: State = {
   id: 2,
-  name: ''
+  name: '',
 };
 
 export interface EffectsState {
@@ -13,7 +13,7 @@ export interface EffectsState {
 }
 
 export const modelWithEffectsState: EffectsState = {
-  name: ''
+  name: '',
 };
 
 export function overload(): any;

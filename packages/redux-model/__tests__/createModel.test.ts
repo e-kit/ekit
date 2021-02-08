@@ -5,7 +5,7 @@ import {
   Store,
   Middleware,
   Dispatch,
-  bindActionCreators
+  bindActionCreators,
 } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { CM, Tction, promiseMiddleware, tPut, tNBPut } from 'src/index';
@@ -22,22 +22,22 @@ const genModel = (logger: jest.Mock) => {
     reducers: {},
     effects: {
       *doGenBaseEffectOK(utils, action: Tction<string>): Iterator<{}, any, any> {
-        yield new Promise(rs => setTimeout(() => rs(), 50));
+        yield new Promise((rs) => setTimeout(() => rs(), 50));
         logger(`doGenBaseEffectOK: ${action.payload}`);
         return `OK doGenBaseEffectOK: ${action.payload}`;
       },
       *doGenBaseEffectError(utils, action: Tction<string>): Iterator<{}, any, any> {
-        yield new Promise(rs => setTimeout(() => rs(), 50));
+        yield new Promise((rs) => setTimeout(() => rs(), 50));
         logger(`doGenBaseEffect: ${action.payload}`);
         throw `ERROR doGenBaseEffectError: ${action.payload}`;
       },
       async doAsyncBlockingaseEffectOK(utils, action: Tction<string>) {
-        await new Promise(rs => setTimeout(() => rs(), 50));
+        await new Promise((rs) => setTimeout(() => rs(), 50));
         logger(`doAsyncBlockingaseEffectOK: ${action.payload}`);
         return `OK doAsyncBlockingaseEffectOK: ${action.payload}`;
       },
       async doAsyncBlockingaseEffectError(utils, action: Tction<string>) {
-        await new Promise(rs => setTimeout(() => rs(), 50));
+        await new Promise((rs) => setTimeout(() => rs(), 50));
         logger(`doAsyncBlockingaseEffectError: ${action.payload}`);
         throw `ERROR doAsyncBlockingaseEffectError: ${action.payload}`;
       },
@@ -266,8 +266,8 @@ const genModel = (logger: jest.Mock) => {
         res = yield tNBPut(model.actions.doAsyncBlockingaseEffectError, `${action.payload} -1`);
         logger(`doAsyncBlockingaseEffectError: ${action.payload} 2 ${JSON.stringify(res)}`);
         throw 'ERROR: doNonBlockingOK_NonBlockingERROR_ERROR';
-      }
-    }
+      },
+    },
   });
   return model;
 };
@@ -299,16 +299,16 @@ describe('createModel works ok', () => {
     model = genModel(log);
     sagaMiddleware = createSagaMiddleware();
     middlewares = [
-      store => {
+      (store) => {
         const nextFunc = promiseMiddleware(store);
-        return next => {
-          return nextFunc(action => {
+        return (next) => {
+          return nextFunc((action) => {
             log(`middleWare watched action: ${JSON.stringify(action)}`);
             return next(action);
           });
         };
       },
-      sagaMiddleware
+      sagaMiddleware,
     ];
     store = createStore(model.reducers, {}, applyMiddleware(...middlewares));
     dispatch = store.dispatch;
@@ -326,7 +326,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(15);
       expect(logsArr).toHaveLength(15);
       expect(logsArr).toMatchSnapshot('doNonBlockingOK_BlockingERROR');
@@ -342,7 +342,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
       expect(logsArr).toMatchSnapshot('doNonBlockingERROR_BlockingOK');
@@ -358,7 +358,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
       expect(logsArr).toMatchSnapshot('doBlockingOK_NonBlockingERROR');
@@ -374,7 +374,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(13);
       expect(logsArr).toHaveLength(13);
       expect(logsArr).toMatchSnapshot('doBlockingOK_BlockingERROR');
@@ -390,7 +390,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(16);
       expect(logsArr).toHaveLength(16);
       expect(logsArr).toMatchSnapshot('doNonBlockingOK_NonBlockingERROR');
@@ -408,7 +408,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(19);
       expect(logsArr).toHaveLength(19);
       expect(logsArr).toMatchSnapshot('doNonBlockingOK_NonBlockingERROR_ERROR');
@@ -424,7 +424,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(15);
       expect(logsArr).toHaveLength(15);
       expect(logsArr).toMatchSnapshot('doGenNBOK_BlockingERROR');
@@ -440,7 +440,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
       expect(logsArr).toMatchSnapshot('doGenNBERROR_BlockingOK');
@@ -456,7 +456,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('doGenBlockingOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
@@ -472,7 +472,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('doGenBlockingOK_BlockingERROR');
       expect(log).toBeCalledTimes(13);
       expect(logsArr).toHaveLength(13);
@@ -488,7 +488,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('doGenNBOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(16);
       expect(logsArr).toHaveLength(16);
@@ -504,7 +504,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('doGenNBOK_NonBlockingERROR_ERROR');
       expect(log).toBeCalledTimes(19);
       expect(logsArr).toHaveLength(19);
@@ -521,7 +521,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genNonBlockingOK_BlockingERROR');
       expect(log).toBeCalledTimes(15);
       expect(logsArr).toHaveLength(15);
@@ -537,7 +537,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genNonBlockingERROR_BlockingOK');
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
@@ -553,7 +553,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genBlockingOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
@@ -569,7 +569,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genBlockingOK_BlockingERROR');
       expect(log).toBeCalledTimes(13);
       expect(logsArr).toHaveLength(13);
@@ -587,7 +587,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genNonBlockingOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(16);
       expect(logsArr).toHaveLength(16);
@@ -605,7 +605,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genNonBlockingOK_NonBlockingERROR_ERROR');
       expect(log).toBeCalledTimes(19);
       expect(logsArr).toHaveLength(19);
@@ -624,7 +624,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncNonBlockingOK_BlockingERROR');
       expect(log).toBeCalledTimes(15);
       expect(logsArr).toHaveLength(15);
@@ -642,7 +642,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncNonBlockingERROR_BlockingOK');
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
@@ -660,7 +660,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncBlockingOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(14);
       expect(logsArr).toHaveLength(14);
@@ -676,7 +676,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncBlockingOK_BlockingERROR');
       expect(log).toBeCalledTimes(13);
       expect(logsArr).toHaveLength(13);
@@ -694,7 +694,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncNonBlockingOK_NonBlockingERROR');
       expect(log).toBeCalledTimes(16);
       expect(logsArr).toHaveLength(16);
@@ -712,7 +712,7 @@ describe('createModel works ok', () => {
         res = undefined;
       }
       log(JSON.stringify(res));
-      await new Promise(rs => setTimeout(rs, 100));
+      await new Promise((rs) => setTimeout(rs, 100));
       expect(logsArr).toMatchSnapshot('genAsyncNonBlockingOK_NonBlockingERROR_ERROR');
       expect(log).toBeCalledTimes(19);
       expect(logsArr).toHaveLength(19);

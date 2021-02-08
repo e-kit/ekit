@@ -1,5 +1,5 @@
 import { modelWithEffects } from './testCreateModelOK';
 
 const {
-  TYPES: { testNoArguments }
+  TYPES: { testNoArguments },
 } = modelWithEffects;

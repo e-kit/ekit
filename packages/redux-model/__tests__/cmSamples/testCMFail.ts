@@ -1,9 +1,5 @@
 /**
  * @file: 应该抛出 ts 语法错误
- * @author: yangqianjun
- * @Date: 2019-12-20 09:36:31
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 17:32:21
  */
 
 import { TkitUtils } from '@ekit/types';
@@ -17,15 +13,15 @@ export const cmFailModel = CM({
     /** 写入名字 */
     doSetName: (state, action: Tction<number>) => {
       state.name = action.payload;
-    }
+    },
   },
   effects: {
     /** 拉取名字 */
     *doFetchName({ tPut }, action: Tction<string>): Iterator<{}, any, any> {
-      yield new Promise(rs => window.setTimeout(rs, 100));
+      yield new Promise((rs) => window.setTimeout(rs, 100));
       tPut(cmFailModel.actions.doSetName, action.payload);
-    }
-  }
+    },
+  },
 });
 
 // should throw error
