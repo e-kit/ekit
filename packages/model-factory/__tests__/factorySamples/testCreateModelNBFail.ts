@@ -6,7 +6,7 @@ const model = factory({
   state: modelWithoutEffectsState,
   reducers: {
     // 正确
-    testOneArguments: (state, action: Tction<string>) => ({ ...state, name: action.payload })
+    testOneArguments: (state, action: Tction<string>) => ({ ...state, name: action.payload }),
   },
   effects: {
     *doA(utils, action: Tction<1>): Iterator<{}, number, any> {
@@ -25,6 +25,6 @@ const model = factory({
       const action = await asyncNBPut(model.actions.doB, 1);
       // 报错，请勿修改，单元测试使用，action.payload is number
       return action.payload;
-    }
-  }
+    },
+  },
 });

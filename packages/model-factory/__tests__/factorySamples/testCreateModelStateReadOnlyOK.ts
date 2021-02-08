@@ -5,8 +5,8 @@ factory({
   namespace: 'socketmodelWithoutEffects',
   state: modelWithoutEffectsState,
   reducers: {
-    doUser: state => {
+    doUser: (state) => {
       return { ...state };
-    }
-  }
+    },
+  },
 });
