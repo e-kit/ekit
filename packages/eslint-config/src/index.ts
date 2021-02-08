@@ -6,13 +6,13 @@ module.exports = {
   extends: [...base.extends, 'plugin:react/recommended', 'prettier/react'],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   settings: {
     ...base.settings,
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   globals: {
     // jest
@@ -23,12 +23,12 @@ module.exports = {
     beforeEach: 'readonly',
     afterEach: 'readonly',
     beforeAll: 'readonly',
-    afterAll: 'readonly'
+    afterAll: 'readonly',
   },
   rules: {
     ...base.rules,
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/display-name': 'off'
-  }
+    'react-hooks/exhaustive-deps': 'error',
+    'react/display-name': 'off',
+  },
 };
