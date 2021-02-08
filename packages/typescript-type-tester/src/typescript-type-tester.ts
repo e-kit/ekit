@@ -7,7 +7,11 @@ import * as ts from 'typescript';
  * @param directory 绝对路径
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const parser = (files: string[], directory: string) => {
+export const parser = (
+  files: string[],
+  directory: string,
+  runtimeCompilerOptions: ts.CompilerOptions = {}
+) => {
   /** 当前执行脚本的目录 */
   const cwd = process.cwd();
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -22,7 +26,8 @@ export const parser = (files: string[], directory: string) => {
     }),
     {
       ...compilerOptions,
-      moduleResolution: ts.ModuleResolutionKind.NodeJs
+      ...runtimeCompilerOptions,
+      moduleResolution: ts.ModuleResolutionKind.NodeJs,
     }
   );
   const allDiagnostics = ts.getPreEmitDiagnostics(program);
@@ -35,7 +40,7 @@ export const parser = (files: string[], directory: string) => {
           fileName: path.relative(cwd, d.file.fileName),
           code,
           category,
-          messageText: ts.flattenDiagnosticMessageText(messageText, '\n')
+          messageText: ts.flattenDiagnosticMessageText(messageText, '\n'),
         });
         if (Array.isArray(relatedInformation)) {
           relatedInformation.forEach((d) => {
@@ -45,7 +50,7 @@ export const parser = (files: string[], directory: string) => {
               fileName: path.relative(cwd, (file && file.fileName) || ''),
               code,
               category,
-              messageText: ts.flattenDiagnosticMessageText(messageText, '\n')
+              messageText: ts.flattenDiagnosticMessageText(messageText, '\n'),
             });
           });
         }
