@@ -1,9 +1,5 @@
 /**
  * @file: description
- * @author: yangqianjun
- * @Date: 2020-02-07 11:11:17
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 15:34:36
  */
 
 import {
@@ -16,7 +12,7 @@ import {
   EFFECTS_PROMISE_RESOLVE,
   EFFECTS_PROMISE_REJECT,
   TKIT_SUB_EFFECT,
-  printError
+  printError,
 } from '@ekit/model-factory';
 
 /** for Hooks model */
@@ -32,7 +28,7 @@ export const effectWrapper: IEffectWrapper = (effect, effects, effectName, optio
     const { getResolver, getRes, getEffect } = FakeEffectFactory({
       effectName,
       silent,
-      loading
+      loading,
     });
     isTopEffect && getEffect()();
     const res = getRes();

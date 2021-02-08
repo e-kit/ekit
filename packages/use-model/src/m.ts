@@ -1,9 +1,5 @@
 /**
  * @file: 局部 model with immer
- * @author: yangqianjun
- * @Date: 2020-02-06 19:48:10
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 17:50:00
  */
 
 import factory, { Reducers } from '@ekit/model-factory';

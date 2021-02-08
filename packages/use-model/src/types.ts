@@ -1,16 +1,12 @@
 /**
  * @file: description
- * @author: yangqianjun
- * @Date: 2020-02-06 19:48:29
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 18:30:32
  */
 
 import 'react';
 import {
   BaseEffectsUtils,
   HooksModelEffectWithPayload,
-  MixHooksModelEffectWithPayload
+  MixHooksModelEffectWithPayload,
 } from '@ekit/model-factory';
 
 declare global {

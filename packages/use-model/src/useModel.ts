@@ -10,7 +10,7 @@ import {
   EFFECTS_PROMISE_REJECT,
   markSubEffect,
   printError,
-  noop
+  noop,
 } from '@ekit/model-factory';
 import { effectWrapper } from './effectWrapper';
 
@@ -84,7 +84,7 @@ export function bindDispatchToAction<A, E, M extends { actions: A; effects: E; T
     asyncPut: wrappedPut,
     asyncNBPut: wrappedNBPut,
     tCall,
-    namespace: model['namespace']
+    namespace: model['namespace'],
   };
 
   // IMP: 不同于全局 store，需要关联 dispatch
@@ -119,7 +119,7 @@ export function bindDispatchToAction<A, E, M extends { actions: A; effects: E; T
  */
 const commonReducer: (reducer: <M>(prevState: M, action: Tction<any>) => M) => any =
   process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
-    ? reducer =>
+    ? (reducer) =>
         useMemo(
           () => <M>(prevState: M, action: Tction<any>) => {
             const newState = reducer(prevState, action);
@@ -136,7 +136,7 @@ const commonReducer: (reducer: <M>(prevState: M, action: Tction<any>) => M) => a
           },
           [reducer]
         )
-    : reducer => reducer;
+    : (reducer) => reducer;
 
 /**
  * Hooks Model
@@ -175,7 +175,7 @@ export const useModel = <
           model
         ),
       [model, dispatch]
-    )
+    ),
   ] as [M extends { state: any } ? M['state'] : {}, M extends { actions: any } ? M['actions'] : {}];
 };
 export default useModel;

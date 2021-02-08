@@ -1,9 +1,5 @@
 /**
  * @file: 局部 model with immer
- * @author: yangqianjun
- * @Date: 2020-02-06 19:55:21
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 17:53:22
  */
 
 import { TkitUtils } from '@ekit/types';

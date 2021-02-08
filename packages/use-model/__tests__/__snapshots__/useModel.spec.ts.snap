@@ -5,19 +5,19 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testLocalModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testLocalModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2554,
-    "fileName": "useModelSamples/testLocalModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testLocalModelFail.ts",
     "messageText": "Expected 0 arguments, but got 1.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testLocalModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testLocalModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
@@ -30,13 +30,13 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2769,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "No overload matches this call.
   Overload 1 of 4, '(effect: <P extends Tction<{ username: string; }>>(payload: P[\\"payload\\"]) => P, args: { username: string; }): Promise<Tction<{ username: string; }>>', gave the following error.
     Type 'number' is not assignable to type 'string'.
@@ -46,25 +46,25 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2554,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "Expected 0 arguments, but got 1.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2339,
-    "fileName": "useModelSamples/testMMFail.ts",
+    "fileName": "__tests__/useModelSamples/testMMFail.ts",
     "messageText": "Property 'username2' does not exist on type '{ username: string; }'.",
   },
 ]
@@ -77,31 +77,31 @@ Array [
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testUseModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testUseModelFail.ts",
     "messageText": "Type 'number' is not assignable to type 'string'.",
   },
   Object {
     "category": 1,
     "code": 2554,
-    "fileName": "useModelSamples/testUseModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testUseModelFail.ts",
     "messageText": "Expected 0 arguments, but got 1.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testUseModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testUseModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
   Object {
     "category": 1,
     "code": 2339,
-    "fileName": "useModelSamples/testUseModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testUseModelFail.ts",
     "messageText": "Property 'id' does not exist on type '{ username: string; }'.",
   },
   Object {
     "category": 1,
     "code": 2322,
-    "fileName": "useModelSamples/testUseModelFail.ts",
+    "fileName": "__tests__/useModelSamples/testUseModelFail.ts",
     "messageText": "Type 'string' is not assignable to type 'number'.",
   },
 ]
