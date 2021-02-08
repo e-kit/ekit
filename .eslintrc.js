@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['@ekit/eslint-config']
+  extends: ['@ekit/eslint-config'],
 };
