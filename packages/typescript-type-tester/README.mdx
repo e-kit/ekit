@@ -1,0 +1,55 @@
+---
+name: TypeScript Type Tester
+menu: '开发/测试/构建'
+route: /ekit/typescript-type-tester
+---
+
+# TypeScript Type Tester
+
+TypeScript 类型测试工具。
+
+```
+npm i -S @ekit/typescript-type-teste
+```
+
+## parser
+
+通过检测示例代码内的 TypeScript 类型错误来进行对自定义工具类型或者 TypeScript 代码类型的单元测试，示例：
+
+### xxOK.ts
+
+```ts
+// 符合静态类型检测，不应该抛出错误
+const str: string = 'string';
+const num: number = 1;
+```
+
+### xxFail.ts
+
+```ts
+// 不符合静态类型检测，应该抛出错误
+const str: string = 1;
+const num: number = 'string';
+```
+
+### xx.spec.ts 单测代码
+
+```ts
+import { parser } from '@ekit/typescript-type-tester';
+
+describe('xx work ok', () => {
+  const files = 'xxFail.ts xxOK.ts'.split(' ');
+  const errors = parser(files, '__tests__');
+  files.forEach((file) =>
+    it(`check ${file} work ok`, () => {
+      const current = errors[file];
+      if (file.match(/OK/)) {
+        expect(current).toHaveLength(0);
+      } else if (file.match(/Fail/)) {
+        expect(current.length).toBeGreaterThan(0);
+      }
+      expect(current).toMatchSnapshot();
+    })
+  );
+});
+```

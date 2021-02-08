@@ -9,14 +9,14 @@ export default {
   filterComponents: (files) => files.filter((p) => p.match(/ts[x]?$/)),
   plugins: [
     css({
-      preprocessor: 'less'
+      preprocessor: 'less',
     }),
     css({
-      preprocessor: 'postcss'
+      preprocessor: 'postcss',
     }),
     createPlugin({
-      modifyFiles: (files) => files.filter((file) => file.indexOf('service/update.md') === -1)
-    })
+      modifyFiles: (files) => files.filter((file) => file.indexOf('service/update.md') === -1),
+    }),
   ],
   modifyBundlerConfig: (config) => {
     return config;
@@ -24,7 +24,7 @@ export default {
   modifyBabelRc: (babelrc, _) => {
     return {
       ...babelrc,
-      plugins: [...babelrc.plugins, '@babel/plugin-proposal-optional-chaining']
+      plugins: [...babelrc.plugins, '@babel/plugin-proposal-optional-chaining'],
     };
-  }
+  },
 };
