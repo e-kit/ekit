@@ -1,9 +1,5 @@
 /**
- * @file: description
- * @author: yangqianjun
- * @Date: 2019-12-17 20:16:34
- * @LastEditors: yangqianjun
- * @LastEditTime: 2019-12-19 11:15:12
+ * @file: useEvent hooks
  */
 import { useEffect, useMemo, useCallback } from 'react';
 import { TkitUtils } from '@ekit/types';
@@ -24,7 +20,7 @@ export function useEvent<F extends (...args: any) => any>(e: string, fn: F, once
         // eslint-disable-next-line prefer-spread
         EventCenter.emit.apply(EventCenter, [e].concat(args));
       },
-      off
+      off,
       // IMP: as - 虽然不知道为什么，但是这修复了 emit 类型推断不正常的问题
     ] as [F, typeof off];
   }, [e, off]);

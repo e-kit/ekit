@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@ekit/event work ok check sample/EventWrapperFail.tsx work ok 1`] = `
+Array [
+  Object {
+    "category": 1,
+    "code": 2769,
+    "fileName": "__tests__/samples/EventWrapperFail.tsx",
+    "messageText": "No overload matches this call.
+  Overload 1 of 2, '(props: Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\">, context?: any): ReactElement<any, any> | Component<Pick<TestRenderProps, \\"ref\\" | ... 2 more ... | \\"callback\\">, any, any>', gave the following error.
+    Type '{ callback: () => any; on: () => any; }' is not assignable to type 'IntrinsicAttributes & Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\">'.
+      Property 'on' does not exist on type 'IntrinsicAttributes & Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\">'.
+  Overload 2 of 2, '(props: PropsWithChildren<Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\">>, context?: any): ReactElement<any, any> | Component<...>', gave the following error.
+    Type '{ callback: () => any; on: () => any; }' is not assignable to type 'IntrinsicAttributes & Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\"> & { children?: ReactNode; }'.
+      Property 'on' does not exist on type 'IntrinsicAttributes & Pick<TestRenderProps, \\"ref\\" | \\"children\\" | \\"key\\" | \\"callback\\"> & { children?: ReactNode; }'.",
+  },
+]
+`;
+
+exports[`@ekit/event work ok check sample/EventWrapperOK.tsx work ok 1`] = `Array []`;

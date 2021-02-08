@@ -1,28 +1,29 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
-
 import { EventCenter } from './event';
 
-// own props
-export interface IEventWrapperProps extends React.Props<any> {
+export interface IEventProps {
   on: Callback;
   once: Callback;
   emit: Emit;
 }
 
-interface IEventWrapperHOCProps {
-  /**
-   * 被装饰的组件
-   */
-  Cp: React.SFC | React.ComponentClass;
-  /**
-   * 被装饰组件的Props
-   */
+// own props
+export interface IEventWrapperProps extends React.Props<any>, IEventProps {}
+
+interface IEventWrapperHOCProps<P = React.SFC | React.ComponentClass> {
+  /** 被装饰的组件 */
+  Cp: P;
+  /** 被装饰组件的Props */
   originProps: any;
+  _ref?: ((instance: unknown) => void) | React.MutableRefObject<unknown> | null;
 }
 
-type Callback = (event: string, info: any) => any;
-type Emit = (event: string, info: any) => any;
+type Callback = (/** 请使用 namespace:eventName 格式命名事件 */ event: string, info: any) => any;
+type Emit = (/** 请使用 namespace:eventName 格式命名事件 */ event: string, info: any) => any;
 
+/** 容器组件 */
 export class EventWrapper extends React.PureComponent<IEventWrapperHOCProps> {
   public observerList: any[];
   public on: Callback;
@@ -49,17 +50,17 @@ export class EventWrapper extends React.PureComponent<IEventWrapperHOCProps> {
   }
 
   public componentWillUnmount() {
-    this.observerList.forEach(observer => observer());
+    this.observerList.forEach((observer) => observer());
   }
 
   public render() {
-    const { Cp, originProps } = this.props;
-    return <Cp {...originProps} on={this.on} once={this.once} emit={this.emit} />;
+    const { Cp, originProps, _ref } = this.props;
+    return <Cp ref={_ref} {...originProps} on={this.on} once={this.once} emit={this.emit} />;
   }
 }
-
-export default function EventWrapperDecorator<T extends React.ComponentClass | React.SFC>(
-  Cp: T
-): any {
-  return (props: any) => <EventWrapper Cp={Cp} originProps={props} />;
+/** 事件容器高阶组件 */
+export default function EventWrapperDecorator<P = {}>(Cp: React.ComponentType<P>) {
+  return React.forwardRef((props, ref) => {
+    return <EventWrapper Cp={Cp} originProps={props} _ref={ref} />;
+  }) as React.ComponentType<Omit<P, keyof IEventProps>>;
 }
