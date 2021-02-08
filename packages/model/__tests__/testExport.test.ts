@@ -1,9 +1,5 @@
 /**
  * @file: export members
- * @author: yangqianjun
- * @Date: 2020-02-06 20:50:31
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-06 20:54:35
  */
 
 import createModel, { Tction, M, MM, CM, ASYNC_EFFECT_EVENT_NAME } from 'src/index';
