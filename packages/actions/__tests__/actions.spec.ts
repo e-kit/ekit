@@ -3,7 +3,7 @@ import { parser } from '@ekit/typescript-type-tester';
 const files = 'actionsOK.ts actionsFail.ts'.split(' ');
 
 describe('actions work ok', () => {
-  const errors = parser(files, 'actionsSamples');
+  const errors = parser(files, '__tests__/actionsSamples');
   files.forEach((file) =>
     it(`check sample/${file} work ok`, () => {
       const current = errors[file];
