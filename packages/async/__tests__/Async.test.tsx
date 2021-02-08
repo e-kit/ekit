@@ -7,13 +7,13 @@ import Async, {
   doAsync,
   doAsyncConfirmed,
   doClearModal,
-  NewAsyncParams
+  NewAsyncParams,
 } from 'src/index';
 import { FormFaker } from './Example';
 
 describe('@ekit/async/useAsync works ok', () => {
   let container: HTMLDivElement;
-  const delay = () => new Promise(rs => setTimeout(rs, 0));
+  const delay = () => new Promise((rs) => setTimeout(rs, 0));
 
   beforeEach(() => {
     container = document.createElement('div');
@@ -36,12 +36,12 @@ describe('@ekit/async/useAsync works ok', () => {
     const success = jest.fn();
     const fail = jest.fn();
     const params = {
-      id: 1
+      id: 1,
     };
     const genParams = { age: 2 };
-    const gen: NewAsyncParams<any>['paramsGenerator'] = p => ({
+    const gen: NewAsyncParams<any>['paramsGenerator'] = (p) => ({
       ...genParams,
-      ...(p.extraParams as any)
+      ...(p.extraParams as any),
     });
     const paramsFun = jest.fn(gen);
     const modal = jest.fn((props: AsyncModalProps) => {
@@ -61,13 +61,13 @@ describe('@ekit/async/useAsync works ok', () => {
             doAsync({
               formProps: {},
               modalProps: {
-                className: 'm1'
+                className: 'm1',
               },
               callback,
               onSuccess: success,
               onError: fail,
               fetch: effect,
-              paramsGenerator: paramsFun
+              paramsGenerator: paramsFun,
             }).then(() => 0, catchCancel)
           }
           onMouseUp={() =>
@@ -77,9 +77,9 @@ describe('@ekit/async/useAsync works ok', () => {
               onSuccess: success,
               onError: fail,
               modalProps: {
-                className: 'm2'
+                className: 'm2',
               },
-              fetch: effect
+              fetch: effect,
             }).then(() => 0, catchCancel)
           }
           onMouseDown={() =>
@@ -87,7 +87,7 @@ describe('@ekit/async/useAsync works ok', () => {
               fetch: effect,
               onSuccess: success,
               onError: fail,
-              callback
+              callback,
             })
           }
           onKeyDown={() => {
@@ -96,7 +96,7 @@ describe('@ekit/async/useAsync works ok', () => {
               onSuccess: success,
               onError: fail,
               callback,
-              params
+              params,
             });
           }}
         ></button>
@@ -156,7 +156,7 @@ describe('@ekit/async/useAsync works ok', () => {
       let cancelButtons: NodeListOf<HTMLElementTagNameMap['button']> = container.querySelectorAll(
         '.cancel'
       );
-      await new Promise(rs => {
+      await new Promise((rs) => {
         const checker = () => {
           if (cancelButtons.length > 1) {
             setTimeout(checker, 200);

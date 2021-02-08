@@ -4,27 +4,27 @@ import { BaseEffectsUtils } from '@ekit/use-model';
 const {
   __model: {
     reducers: { doAsyncStart, doAsyncConfirmedStart, doAsyncEnd, doClearModal },
-    effects
-  }
+    effects,
+  },
 } = asyncModel;
 
 function getInitialState(): IAsyncState {
   return {
-    asyncStatus: []
+    asyncStatus: [],
   };
 }
 
 async function loadData() {
   return {
     code: 0,
-    result: { id: 0 }
+    result: { id: 0 },
   };
 }
 
 async function loadDataError() {
   return {
     code: 10,
-    result: { id: 0 }
+    result: { id: 0 },
   };
 }
 
@@ -34,8 +34,8 @@ describe('@ekit/async/asyncModel works ok', () => {
     let newState = doAsyncStart(state, {
       payload: {
         isModal: true,
-        ASYNC_ID: 1
-      }
+        ASYNC_ID: 1,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(1);
     expect(newState.asyncStatus[0].confirmed).toEqual(false);
@@ -44,8 +44,8 @@ describe('@ekit/async/asyncModel works ok', () => {
 
     newState = doAsyncConfirmedStart(newState, {
       payload: {
-        ASYNC_ID: 1
-      }
+        ASYNC_ID: 1,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(1);
     expect(newState.asyncStatus[0].confirmed).toEqual(true);
@@ -54,8 +54,8 @@ describe('@ekit/async/asyncModel works ok', () => {
 
     newState = doAsyncConfirmedStart(newState, {
       payload: {
-        ASYNC_ID: 2
-      }
+        ASYNC_ID: 2,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(2);
     expect(newState.asyncStatus[1].confirmed).toEqual(true);
@@ -66,8 +66,8 @@ describe('@ekit/async/asyncModel works ok', () => {
     newState = doAsyncEnd(newState, {
       payload: {
         ASYNC_ID: 2,
-        isSuccess: false
-      }
+        isSuccess: false,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(1);
 
@@ -75,8 +75,8 @@ describe('@ekit/async/asyncModel works ok', () => {
     newState = doAsyncEnd(newState, {
       payload: {
         ASYNC_ID: 1,
-        isSuccess: false
-      }
+        isSuccess: false,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(1);
 
@@ -84,8 +84,8 @@ describe('@ekit/async/asyncModel works ok', () => {
     newState = doAsyncEnd(newState, {
       payload: {
         ASYNC_ID: 1,
-        isSuccess: true
-      }
+        isSuccess: true,
+      },
     });
     expect(newState.asyncStatus).toHaveLength(1);
 
@@ -98,7 +98,7 @@ describe('@ekit/async/asyncModel works ok', () => {
       const {
         doAsync: [doAsync],
         doAsyncCancel: [doAsyncCancel],
-        doAsyncConfirmed: [doAsyncConfirmed]
+        doAsyncConfirmed: [doAsyncConfirmed],
       } = effects;
       let payloads: any[] = [];
       const tPut = jest.fn((action: any, payload: any) => {
@@ -112,8 +112,8 @@ describe('@ekit/async/asyncModel works ok', () => {
       const eff: BaseEffectsUtils = { tPut } as any;
       await doAsync(eff, {
         payload: {
-          fetch: loadData
-        }
+          fetch: loadData,
+        },
       });
       expect(tPut).toBeCalled();
       expect(payloads).toMatchSnapshot('doAsync');
@@ -125,8 +125,8 @@ describe('@ekit/async/asyncModel works ok', () => {
       await doAsyncConfirmed(eff, {
         payload: {
           fetch: spyLoadData,
-          params: 1
-        }
+          params: 1,
+        },
       });
       expect(tPut).toBeCalled();
       expect(payloads).toMatchSnapshot('doAsyncConfirmed params');
@@ -138,8 +138,8 @@ describe('@ekit/async/asyncModel works ok', () => {
       await doAsyncConfirmed(eff, {
         payload: {
           fetch: spyLoadData,
-          paramsGenerator: () => [1]
-        }
+          paramsGenerator: () => [1],
+        },
       });
       expect(tPut).toBeCalled();
       expect(payloads).toMatchSnapshot('doAsyncConfirmed paramsGenerator');
@@ -152,8 +152,8 @@ describe('@ekit/async/asyncModel works ok', () => {
       await doAsyncConfirmed(eff, {
         payload: {
           fetch: spyLoadData,
-          paramsGenerator: () => [1]
-        }
+          paramsGenerator: () => [1],
+        },
       });
       expect(tPut).toBeCalled();
       expect(payloads).toMatchSnapshot('doAsyncConfirmed paramsGenerator error');
@@ -163,7 +163,7 @@ describe('@ekit/async/asyncModel works ok', () => {
       spyLoadData.mockClear();
 
       await doAsyncCancel(eff, {
-        payload: 1
+        payload: 1,
       });
       expect(tPut).toBeCalled();
       expect(payloads).toMatchSnapshot('doAsyncCancel');
