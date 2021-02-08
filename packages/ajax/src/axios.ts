@@ -1,10 +1,3 @@
-/**
- * @author: yangqianjun
- * @file: axios封装
- * @Date: 2019-09-02 15:15:27
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-01-08 18:28:58
- */
 import axios, { AxiosError, Cancel } from 'axios';
 import EventCenter from '@ekit/event-center';
 import { AjaxCancelCode, AjaxErrorCode } from './consts';
@@ -13,7 +6,7 @@ import { AjaxCancelCode, AjaxErrorCode } from './consts';
 export default axios.create({
   timeout: 5000,
   withCredentials: true,
-  headers: {}
+  headers: {},
 });
 
 export const emptyFunc = () => void 0;
@@ -26,11 +19,11 @@ export function onStatusError(error: AxiosError | Error | Cancel) {
     ? {
         ...resp.data,
         code: resp.status,
-        message: resp.data && resp.data.message ? resp.data.message : resp.statusText
+        message: resp.data && resp.data.message ? resp.data.message : resp.statusText,
       }
     : {
         code: error instanceof axios.Cancel ? AjaxCancelCode : AjaxErrorCode,
-        message: error.message
+        message: error.message,
       };
   if (err.code === 401 || err.code === 403) {
     EventCenter.emit('common.user.status', err);

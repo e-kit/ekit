@@ -1,11 +1,3 @@
-/**
- * @author: yangqianjun
- * @file: thanks for https://github.com/prisma-labs/graphql-request
- * @Date: 2019-10-30 16:38:27
- * @LastEditors: yangqianjun
- * @LastEditTime: 2019-12-27 13:35:19
- */
-
 import qs from 'qs';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { GraphQLErrorCode } from './consts';
@@ -55,7 +47,7 @@ export function extractCodeAndMessage(errors: GraphQLError[]) {
     },
     {
       code: GraphQLErrorCode,
-      message: ''
+      message: '',
     }
   );
 }
@@ -80,7 +72,7 @@ export class GraphQLClient {
 
     const body = JSON.stringify({
       query,
-      variables: variables ? variables : undefined
+      variables: variables ? variables : undefined,
     });
     const config: AxiosRequestConfig = {
       url: this.url,
@@ -89,17 +81,17 @@ export class GraphQLClient {
         'Content-Type': 'application/json',
         ...headers,
         // 调用时优先级更高
-        ...(opt && opt.headers)
+        ...(opt && opt.headers),
       },
       data: body,
-      ...others
+      ...others,
     };
     if (testUser) {
       config.headers['Test-User'] = testUser;
     }
     const cancel = opt && opt.cancel;
     if (cancel) {
-      config.cancelToken = new axios.CancelToken(c => {
+      config.cancelToken = new axios.CancelToken((c) => {
         cancel.then(c, emptyFunc);
       });
     }
@@ -108,12 +100,12 @@ export class GraphQLClient {
       if (res.status === 200 && res.data && (!res.data.errors || !res.data.errors.length)) {
         return {
           code: 0,
-          result: res.data.data
+          result: res.data.data,
         };
       }
       return {
         result: res.data && res.data.data,
-        ...extractCodeAndMessage(res.data.errors || [])
+        ...extractCodeAndMessage(res.data.errors || []),
       };
     }, onStatusError);
   }

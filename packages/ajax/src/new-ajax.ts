@@ -1,10 +1,3 @@
-/**
- * @author: yangqianjun
- * @file: ajax封装
- * @Date: 2019-11-21 15:25:51
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-02-07 20:38:12
- */
 import qs from 'qs';
 import axios from 'axios';
 import axiosInst, { onStatusError, emptyFunc } from './axios';
@@ -49,13 +42,13 @@ export class WrappedFetch {
   /** ajax 方法 */
   public ajax = (
     { method, url, data, form, query, header, extra, cancel, headers }: WrappedFetchParams,
-    path?: string,
-    basePath?: string
+    _path?: string,
+    _basePath?: string
   ) => {
     let config = {
       ...extra,
       method: method.toLowerCase(),
-      headers: { ...headers, ...header }
+      headers: { ...headers, ...header },
     };
     if (testUser) {
       config.headers['Test-User'] = testUser;
@@ -67,9 +60,9 @@ export class WrappedFetch {
         headers: {
           // 可覆盖
           'Content-Type': 'application/json',
-          ...config.headers
+          ...config.headers,
         },
-        data
+        data,
       };
     }
     // form
@@ -79,16 +72,16 @@ export class WrappedFetch {
         headers: {
           // 可覆盖
           'Content-Type': 'application/x-www-form-urlencoded',
-          ...config.headers
+          ...config.headers,
         },
         data:
           config.headers && config.headers['Content-Type'] === 'multipart/form-data'
             ? form
-            : qs.stringify(form)
+            : qs.stringify(form),
       };
     }
     const [{ resolve: cancelRequest }, internalCancel] = promiseFactory<string>();
-    config.cancelToken = new axios.CancelToken(c => {
+    config.cancelToken = new axios.CancelToken((c) => {
       // 外部
       cancel && cancel.then(c, emptyFunc);
       // 内部自动取消
@@ -102,9 +95,9 @@ export class WrappedFetch {
             ? `${url}?testUser=${testUser}`
             : url.replace('?', () => `?testUser=${testUser}`)
           : url,
-        params: query
+        params: query,
       })
-      .then(res => res.data);
+      .then((res) => res.data);
     if (this.autoCatch) {
       prom = prom.catch(typeof this.autoCatch === 'function' ? this.autoCatch : onStatusError);
     }

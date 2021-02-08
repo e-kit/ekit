@@ -1,11 +1,3 @@
-/**
- * @author: yangqianjun
- * @file: ajax 常量
- * @Date: 2019-12-06 18:32:12
- * @LastEditors: yangqianjun
- * @LastEditTime: 2020-01-08 18:31:51
- */
-
 import { TkitUtils } from '@ekit/types';
 
 /** 取消请求错误码 */
