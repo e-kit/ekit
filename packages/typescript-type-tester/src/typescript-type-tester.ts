@@ -14,10 +14,19 @@ export const parser = (
 ) => {
   /** 当前执行脚本的目录 */
   const cwd = process.cwd();
+
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { compilerOptions: rootCompilerOptions } = require(path.join(
+    cwd,
+    '../typescript-config/',
+    'tsconfig.json'
+  ));
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { compilerOptions } = require(path.join(cwd, 'tsconfig.json'));
+
   const fileNameMap: { [file: string]: any[] } = {};
   const errorMap: { [file: string]: any[] } = {};
+
   const program = ts.createProgram(
     files.map((file) => {
       const p = path.join(directory, file);
@@ -25,9 +34,13 @@ export const parser = (
       return p;
     }),
     {
+      ...rootCompilerOptions,
       ...compilerOptions,
       ...runtimeCompilerOptions,
       moduleResolution: ts.ModuleResolutionKind.NodeJs,
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES5,
+      jsx: ts.JsxEmit.React,
     }
   );
   const allDiagnostics = ts.getPreEmitDiagnostics(program);
