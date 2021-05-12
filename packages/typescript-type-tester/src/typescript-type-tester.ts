@@ -5,6 +5,7 @@ import * as ts from 'typescript';
  * 解析一个 .ts 文件并返回错误信息
  * @param files 文件名
  * @param directory 绝对路径
+ * @param runtimeCompilerOptions 运行时额外的配置项，默认 {}
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const parser = (
@@ -14,10 +15,12 @@ export const parser = (
 ) => {
   /** 当前执行脚本的目录 */
   const cwd = process.cwd();
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { compilerOptions } = require(path.join(cwd, 'tsconfig.json'));
+  const configJSON = require(path.join(cwd, 'tsconfig.json'));
+  const { options } = ts.parseJsonConfigFileContent(configJSON, ts.sys, cwd);
+
   const fileNameMap: { [file: string]: any[] } = {};
   const errorMap: { [file: string]: any[] } = {};
+
   const program = ts.createProgram(
     files.map((file) => {
       const p = path.join(directory, file);
@@ -25,7 +28,7 @@ export const parser = (
       return p;
     }),
     {
-      ...compilerOptions,
+      ...options,
       ...runtimeCompilerOptions,
       moduleResolution: ts.ModuleResolutionKind.NodeJs,
     }

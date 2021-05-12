@@ -16,7 +16,7 @@ import {
   Reducers,
   IEffectFactory,
   BaseEffectsUtils,
-  GetGeneratorReturnType
+  GetGeneratorReturnType,
 } from './types';
 import { ModernType, defaultEffectOptions } from './consts';
 
@@ -57,14 +57,20 @@ export default function factory<
       : <P extends TkitUtils.GetArgumentsType<R[doSomething]>[1]>(payload: P['payload']) => P;
   };
 
+  type AsyncActionObject<E extends Effects<Utils>[string]> = TkitUtils.GetArgumentsType<
+    TkitUtils.GetModelEffect<E>
+  >[1];
+
   // IMP: 修复当 model effects 缺省的情况下，类型推断错误的bug
   // model 的 reducers、effects 不能是泛型
   type AsyncActions = {
-    [doSomething in EffectName]: TkitUtils.GetArgumentsType<
-      TkitUtils.GetModelEffect<E[doSomething]>
-    >[1] extends never | undefined
+    [doSomething in EffectName]: AsyncActionObject<E[doSomething]> extends never | undefined
       ? () => Promise<GetGeneratorReturnType<TkitUtils.GetModelEffect<E[doSomething]>>>
-      : <P extends TkitUtils.GetArgumentsType<TkitUtils.GetModelEffect<E[doSomething]>>[1]>(
+      : undefined extends AsyncActionObject<E[doSomething]>
+      ? <P extends NonNullable<AsyncActionObject<E[doSomething]>>>(
+          payload?: P['payload']
+        ) => Promise<GetGeneratorReturnType<TkitUtils.GetModelEffect<E[doSomething]>>>
+      : <P extends AsyncActionObject<E[doSomething]>>(
           payload: P['payload']
         ) => Promise<GetGeneratorReturnType<TkitUtils.GetModelEffect<E[doSomething]>>>;
   };
@@ -90,13 +96,13 @@ export default function factory<
               ...state,
               [namespace]: produce(state[namespace], (draftState: Readonly<M>) =>
                 reducers[doSomething](draftState, action)
-              )
+              ),
             };
           }
         : modern === ModernType.HookModern
         ? <S>(state: S, action: AbstractAction) => {
             // FIXME: as any
-            return produce(state, draftState => reducers[doSomething](draftState as any, action));
+            return produce(state, (draftState) => reducers[doSomething](draftState as any, action));
           }
         : reducers[doSomething];
     actions[doSomething] = ((payload: Payload['payload']) =>
@@ -134,6 +140,6 @@ export default function factory<
     TYPES: TYPES as ActionTypes,
     effects: { ...effects } as E, // force no undefined
     namespace,
-    __model: model
+    __model: model,
   };
 }
